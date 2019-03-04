@@ -61,7 +61,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         }
         LatLng mylocation = new LatLng(location.getLatitude(), location.getLongitude());
         mMap.getUiSettings().setZoomControlsEnabled(true);
-        Marker marker = mMap.addMarker(new MarkerOptions().position(mylocation).title("The Home"));
+        Marker marker = mMap.addMarker(new MarkerOptions().position(mylocation).title("Your"));
         marker.showInfoWindow();
         mMap.setBuildingsEnabled(true);
         if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
