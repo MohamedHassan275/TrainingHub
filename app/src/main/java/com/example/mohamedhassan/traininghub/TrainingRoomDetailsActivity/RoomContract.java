@@ -1,4 +1,4 @@
-package com.example.mohamedhassan.traininghub.TrainingRoomActivity;
+package com.example.mohamedhassan.traininghub.TrainingRoomDetailsActivity;
 
 public interface RoomContract {
 

@@ -1,4 +1,4 @@
-package com.example.mohamedhassan.traininghub.TrainingRoomActivity;
+package com.example.mohamedhassan.traininghub.TrainingRoomDetailsActivity;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -7,12 +7,9 @@ import android.os.Bundle;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.mohamedhassan.traininghub.HomeMain;
 import com.example.mohamedhassan.traininghub.MapsActivity;
 import com.example.mohamedhassan.traininghub.R;
 

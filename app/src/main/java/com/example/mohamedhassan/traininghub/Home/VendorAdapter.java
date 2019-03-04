@@ -13,7 +13,7 @@ import android.widget.RatingBar;
 import android.widget.TextView;
 
 import com.example.mohamedhassan.traininghub.R;
-import com.example.mohamedhassan.traininghub.TrainingRoomActivity.TrainingRoomActivity;
+import com.example.mohamedhassan.traininghub.TrainingRoomDetailsActivity.TrainingRoomActivity;
 
 import java.util.List;
 

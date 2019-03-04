@@ -1,8 +1,6 @@
-package com.example.mohamedhassan.traininghub.TrainingRoomActivity;
+package com.example.mohamedhassan.traininghub.TrainingRoomDetailsActivity;
 
 import android.content.Context;
-
-import com.example.mohamedhassan.traininghub.Register.RegisterContract;
 
 public class RoomPresenter {
 

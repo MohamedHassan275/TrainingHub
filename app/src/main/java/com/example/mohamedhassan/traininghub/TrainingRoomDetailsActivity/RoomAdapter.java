@@ -1,4 +1,4 @@
-package com.example.mohamedhassan.traininghub.TrainingRoomActivity;
+package com.example.mohamedhassan.traininghub.TrainingRoomDetailsActivity;
 
 import android.content.Context;
 import android.content.Intent;
@@ -13,7 +13,6 @@ import android.widget.TextView;
 
 import com.example.mohamedhassan.traininghub.ChangeLangauge;
 import com.example.mohamedhassan.traininghub.R;
-import com.example.mohamedhassan.traininghub.viewpager.Room_Training_Details;
 
 import java.util.List;
 
