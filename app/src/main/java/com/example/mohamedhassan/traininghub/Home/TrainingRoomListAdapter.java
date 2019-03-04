@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.example.mohamedhassan.traininghub.Model_RoomTraining.TrainingRoomListData;
 import com.example.mohamedhassan.traininghub.R;
-import com.example.mohamedhassan.traininghub.TrainingRoomDetailsActivity.TrainingRoomActivity;
+import com.example.mohamedhassan.traininghub.TrainingRoomDetailsActivity.TrainingRoomDetailsActivity;
 
 import java.util.List;
 
@@ -75,9 +75,9 @@ public class TrainingRoomListAdapter extends RecyclerView.Adapter<TrainingRoomLi
         myViewHolder.Name.setText(vendor.getName());
         myViewHolder.Location.setText(vendor.getLocation());
         myViewHolder.Phone.setText(vendor.getPhone());
-        myViewHolder.date_vendor.setText(vendor.getDate_vendor());
+        myViewHolder.date_vendor.setText(vendor.getDate());
         myViewHolder.Valable.setText(vendor.getValable());
-        myViewHolder.ratingBar_vendor.setRating(Float.parseFloat(vendor.getRatingBar_vendor()));
+        myViewHolder.ratingBar_vendor.setRating(Float.parseFloat(vendor.getRatingBarTrainingRoom()));
 
 
 
@@ -86,7 +86,7 @@ public class TrainingRoomListAdapter extends RecyclerView.Adapter<TrainingRoomLi
            @Override
            public void onClick(View v) {
 
-               Intent intent =new Intent(context,TrainingRoomActivity.class);
+               Intent intent =new Intent(context,TrainingRoomDetailsActivity.class);
                context.startActivity(intent);
            }
        });

@@ -7,8 +7,8 @@ public class TrainingRoomListData {
     String location;
     String phone;
     String valable;
-    String ratingBar_vendor;
-    String date_vendor;
+    String ratingBarTrainingRoom;
+    String date;
 
 
     public TrainingRoomListData(int photo, int rate, String name, String location, String phone, String valable, String ratingBar_vendor, String date_vendor) {
@@ -18,8 +18,8 @@ public class TrainingRoomListData {
         this.location = location;
         this.phone = phone;
         this.valable = valable;
-        this.ratingBar_vendor = ratingBar_vendor;
-        this.date_vendor = date_vendor;
+        this.ratingBarTrainingRoom = ratingBar_vendor;
+        this.date = date_vendor;
     }
 
 
@@ -47,11 +47,11 @@ public class TrainingRoomListData {
         return valable;
     }
 
-    public String getRatingBar_vendor() {
-        return ratingBar_vendor;
+    public String getRatingBarTrainingRoom() {
+        return ratingBarTrainingRoom;
     }
 
-    public String getDate_vendor() {
-        return date_vendor;
+    public String getDate() {
+        return date;
     }
 }

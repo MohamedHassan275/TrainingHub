@@ -15,7 +15,7 @@ import com.example.mohamedhassan.traininghub.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Home_fragment extends Fragment implements HomeContract.View {
+public class Home_fragment extends Fragment implements TrainingRoomListContract.View {
 
   //  ProgressBar mProgressView;
     RecyclerView recyclerView;
@@ -59,7 +59,7 @@ public class Home_fragment extends Fragment implements HomeContract.View {
     @Override
     public void navigateToDetailRoom() {
 
-        Intent intent = new Intent(getContext(), TrainingRoomActivity.class);
+        Intent intent = new Intent(getContext(), TrainingRoomDetailsActivity.class);
         startActivity(intent);
     }
 

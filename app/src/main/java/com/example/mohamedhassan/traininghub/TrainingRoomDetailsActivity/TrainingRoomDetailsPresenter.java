@@ -2,13 +2,13 @@ package com.example.mohamedhassan.traininghub.TrainingRoomDetailsActivity;
 
 import android.content.Context;
 
-public class RoomPresenter {
+public class TrainingRoomDetailsPresenter {
 
-    private RoomContract.View mView;
+    private TrainingRoomDetailsContract.View mView;
 
     private Context mContext;
 
-    public RoomPresenter(RoomContract.View mView, Context mContext) {
+    public TrainingRoomDetailsPresenter(TrainingRoomDetailsContract.View mView, Context mContext) {
         this.mView = mView;
         this.mContext = mContext;
     }

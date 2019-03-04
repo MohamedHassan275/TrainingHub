@@ -1,6 +1,6 @@
 package com.example.mohamedhassan.traininghub.TrainingRoomDetailsActivity;
 
-public interface RoomContract {
+public interface TrainingRoomDetailsContract {
 
     interface View {
 

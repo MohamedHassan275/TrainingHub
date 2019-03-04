@@ -19,14 +19,14 @@ import com.example.mohamedhassan.traininghub.Model_RoomTraining.RoomListData;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TrainingRoomActivity extends AppCompatActivity implements RoomContract.View {
+public class TrainingRoomDetailsActivity extends AppCompatActivity implements TrainingRoomDetailsContract.View {
 
     RecyclerView recyclerView;
     private List<RoomListData> movieVendorList = new ArrayList<>();
     private RoomListAdapter roomAdapter;
     TextView location;
     ImageView phone_call,share_phone;
-    TrainingRoomActivity context = this;
+    TrainingRoomDetailsActivity context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class TrainingRoomActivity extends AppCompatActivity implements RoomContr
         setContentView(R.layout.activity_training_room);
 
 
-        TrainingRoomActivity.this.setTitle("Training Room");
+        TrainingRoomDetailsActivity.this.setTitle("Training Room");
         recyclerView = (RecyclerView) findViewById(R.id.recycle_view_Room);
 
         roomAdapter = new RoomListAdapter(movieVendorList);
@@ -97,7 +97,7 @@ public class TrainingRoomActivity extends AppCompatActivity implements RoomContr
     @Override
     public void BrnLocation() {
 
-        startActivity(new Intent(TrainingRoomActivity.this, MapsActivity.class));
+        startActivity(new Intent(TrainingRoomDetailsActivity.this, MapsActivity.class));
         finish();
 
     }

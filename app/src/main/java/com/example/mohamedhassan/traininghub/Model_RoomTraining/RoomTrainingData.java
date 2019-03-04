@@ -28,13 +28,7 @@ public class RoomTrainingData {
         NubmerRooms = nubmerRooms;
     }
 
-    public RoomTrainingData(int photo, String name, String city, String valable, String rate) {
-        this.photo = photo;
-        Name = name;
-        this.city = city;
-        this.valable = valable;
-        Rate = rate;
-    }
+
 
     public int getPhoto() {
         return photo;

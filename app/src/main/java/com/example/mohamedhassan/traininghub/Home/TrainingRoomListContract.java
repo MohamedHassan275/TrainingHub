@@ -1,6 +1,6 @@
 package com.example.mohamedhassan.traininghub.Home;
 
-public interface HomeContract {
+public interface TrainingRoomListContract {
 
     interface View{
 
@@ -9,6 +9,10 @@ public interface HomeContract {
         void navigateToDetailRoom();
 
         void showProgress(boolean show);*/
+
+
+    }
+    interface Presenter{
 
 
     }
