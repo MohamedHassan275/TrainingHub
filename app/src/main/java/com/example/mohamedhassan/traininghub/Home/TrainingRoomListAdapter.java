@@ -12,17 +12,18 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import com.example.mohamedhassan.traininghub.Model_RoomTraining.TrainingRoomListData;
 import com.example.mohamedhassan.traininghub.R;
 import com.example.mohamedhassan.traininghub.TrainingRoomDetailsActivity.TrainingRoomActivity;
 
 import java.util.List;
 
-public class VendorAdapter extends RecyclerView.Adapter<VendorAdapter.MyViewHolder> {
+public class TrainingRoomListAdapter extends RecyclerView.Adapter<TrainingRoomListAdapter.MyViewHolder> {
 
-    private List<UserVendor> moviesList;
+    private List<TrainingRoomListData> moviesList;
     Context context;
 
-    public VendorAdapter(Context context, List<UserVendor> moviesList) {
+    public TrainingRoomListAdapter(Context context, List<TrainingRoomListData> moviesList) {
         this.moviesList = moviesList;
         this.context = context;
     }
@@ -52,7 +53,7 @@ public class VendorAdapter extends RecyclerView.Adapter<VendorAdapter.MyViewHold
 
     }
 
-    public VendorAdapter(List<UserVendor> moviesList) {
+    public TrainingRoomListAdapter(List<TrainingRoomListData> moviesList) {
         this.moviesList = moviesList;
     }
 
@@ -63,13 +64,13 @@ public class VendorAdapter extends RecyclerView.Adapter<VendorAdapter.MyViewHold
                 .inflate(R.layout.vendor_data, viewGroup, false);
 
 
-        return new VendorAdapter.MyViewHolder(itemView);
+        return new TrainingRoomListAdapter.MyViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(MyViewHolder myViewHolder, int position) {
 
-        UserVendor vendor = moviesList.get(position);
+        TrainingRoomListData vendor = moviesList.get(position);
         myViewHolder.Photo.setImageResource(vendor.getPhoto());
         myViewHolder.Name.setText(vendor.getName());
         myViewHolder.Location.setText(vendor.getLocation());

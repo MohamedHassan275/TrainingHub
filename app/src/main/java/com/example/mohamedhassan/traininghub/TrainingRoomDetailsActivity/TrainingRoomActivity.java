@@ -12,6 +12,8 @@ import android.widget.TextView;
 
 import com.example.mohamedhassan.traininghub.MapsActivity;
 import com.example.mohamedhassan.traininghub.R;
+import com.example.mohamedhassan.traininghub.RoomDetails.RoomListAdapter;
+import com.example.mohamedhassan.traininghub.Model_RoomTraining.RoomListData;
 
 
 import java.util.ArrayList;
@@ -20,8 +22,8 @@ import java.util.List;
 public class TrainingRoomActivity extends AppCompatActivity implements RoomContract.View {
 
     RecyclerView recyclerView;
-    private List<VendorRoomData> movieVendorList = new ArrayList<>();
-    private RoomAdapter roomAdapter;
+    private List<RoomListData> movieVendorList = new ArrayList<>();
+    private RoomListAdapter roomAdapter;
     TextView location;
     ImageView phone_call,share_phone;
     TrainingRoomActivity context = this;
@@ -35,7 +37,7 @@ public class TrainingRoomActivity extends AppCompatActivity implements RoomContr
         TrainingRoomActivity.this.setTitle("Training Room");
         recyclerView = (RecyclerView) findViewById(R.id.recycle_view_Room);
 
-        roomAdapter = new RoomAdapter(movieVendorList);
+        roomAdapter = new RoomListAdapter(movieVendorList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
         recyclerView.setLayoutManager(mLayoutManager);
 
@@ -58,34 +60,34 @@ public class TrainingRoomActivity extends AppCompatActivity implements RoomContr
 
     private void prepareVendorData() {
 
-        VendorRoomData movie = new VendorRoomData(R.drawable.training_courses,R.drawable.food,R.drawable.food,R.drawable.drink,"Room 1","100","35 pare hour",
+        RoomListData movie = new RoomListData(R.drawable.training_courses,R.drawable.food,R.drawable.food,R.drawable.drink,"Room 1","100","35 pare hour",
                 "From 15:00 To 17:00");
         movieVendorList.add(movie);
-        movie = new VendorRoomData(R.drawable.training_courses,R.drawable.food,R.drawable.food,R.drawable.drink,"Room 2","25","25 pare hour",
+        movie = new RoomListData(R.drawable.training_courses,R.drawable.food,R.drawable.food,R.drawable.drink,"Room 2","25","25 pare hour",
                 "From 13:00 To 15:00");
         movieVendorList.add(movie);
-        movie = new VendorRoomData(R.drawable.training_courses,R.drawable.food,R.drawable.food,R.drawable.drink,"Room 3","35","30 pare hour",
+        movie = new RoomListData(R.drawable.training_courses,R.drawable.food,R.drawable.food,R.drawable.drink,"Room 3","35","30 pare hour",
                 "From 11:00 To 13:00");
         movieVendorList.add(movie);
-        movie = new VendorRoomData(R.drawable.training_courses,R.drawable.food,R.drawable.food,R.drawable.drink,"Room 4","50","25 pare hour",
+        movie = new RoomListData(R.drawable.training_courses,R.drawable.food,R.drawable.food,R.drawable.drink,"Room 4","50","25 pare hour",
                 "From 9::00 To 11:00");
         movieVendorList.add(movie);
-        movie = new VendorRoomData(R.drawable.training_courses,R.drawable.food,R.drawable.food,R.drawable.drink,"Room 5","75","50 pare hour",
+        movie = new RoomListData(R.drawable.training_courses,R.drawable.food,R.drawable.food,R.drawable.drink,"Room 5","75","50 pare hour",
                 "From 17:00 To 19:00");
         movieVendorList.add(movie);
-        movie = new VendorRoomData(R.drawable.training_courses,R.drawable.food,R.drawable.food,R.drawable.drink,"Room 6","65","75 pare hour",
+        movie = new RoomListData(R.drawable.training_courses,R.drawable.food,R.drawable.food,R.drawable.drink,"Room 6","65","75 pare hour",
                 "From 19:00 To 21:00");
         movieVendorList.add(movie);
-        movie = new VendorRoomData(R.drawable.training_courses,R.drawable.food,R.drawable.food,R.drawable.drink,"Room 7","65","65 pare hour",
+        movie = new RoomListData(R.drawable.training_courses,R.drawable.food,R.drawable.food,R.drawable.drink,"Room 7","65","65 pare hour",
                 "From 21:00 To 23:00");
         movieVendorList.add(movie);
-        movie = new VendorRoomData(R.drawable.training_courses,R.drawable.food,R.drawable.food,R.drawable.drink,"Room 8","30","60 pare hour",
+        movie = new RoomListData(R.drawable.training_courses,R.drawable.food,R.drawable.food,R.drawable.drink,"Room 8","30","60 pare hour",
                 "From 7:00 To 9:00");
         movieVendorList.add(movie);
-        movie = new VendorRoomData(R.drawable.training_courses,R.drawable.food,R.drawable.food,R.drawable.drink,"Room 9","35","55 pare hour",
+        movie = new RoomListData(R.drawable.training_courses,R.drawable.food,R.drawable.food,R.drawable.drink,"Room 9","35","55 pare hour",
                 "From 13:00 To 19:00");
         movieVendorList.add(movie);
-        movie = new VendorRoomData(R.drawable.training_courses,R.drawable.food,R.drawable.food,R.drawable.drink,"Room 10","15","55 pare hour",
+        movie = new RoomListData(R.drawable.training_courses,R.drawable.food,R.drawable.food,R.drawable.drink,"Room 10","15","55 pare hour",
                 "From 6:00 To 9:00");
         movieVendorList.add(movie);
 

@@ -1,6 +1,6 @@
-package com.example.mohamedhassan.traininghub.Home;
+package com.example.mohamedhassan.traininghub.Model_RoomTraining;
 
-public class UserVendor {
+public class TrainingRoomListData {
 
     int photo,rate;
     String name;
@@ -11,7 +11,7 @@ public class UserVendor {
     String date_vendor;
 
 
-    public UserVendor(int photo, int rate, String name, String location, String phone, String valable, String ratingBar_vendor, String date_vendor) {
+    public TrainingRoomListData(int photo, int rate, String name, String location, String phone, String valable, String ratingBar_vendor, String date_vendor) {
         this.photo = photo;
         this.rate = rate;
         this.name = name;

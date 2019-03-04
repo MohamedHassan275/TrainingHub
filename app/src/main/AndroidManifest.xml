@@ -55,7 +55,7 @@
             android:label="@string/title_activity_maps" >
 
         </activity>
-        <activity android:name=".viewpager.Room_Training_Details">
+        <activity android:name=".RoomDetails.RoomTrainingDetailsActivity">
 
         </activity>
     </application>

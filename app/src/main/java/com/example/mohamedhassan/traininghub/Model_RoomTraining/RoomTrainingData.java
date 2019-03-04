@@ -1,4 +1,4 @@
-package com.example.mohamedhassan.traininghub.TrainingRoomDetailsActivity;
+package com.example.mohamedhassan.traininghub.Model_RoomTraining;
 
 public class RoomTrainingData {
 
@@ -10,7 +10,7 @@ public class RoomTrainingData {
     String valable;
     String Rate;
     String Region;
-   // String Address;
+    String Address;
     String Details;
     String NubmerRooms;
 
@@ -26,6 +26,14 @@ public class RoomTrainingData {
       //  Address = address;
         Details = details;
         NubmerRooms = nubmerRooms;
+    }
+
+    public RoomTrainingData(int photo, String name, String city, String valable, String rate) {
+        this.photo = photo;
+        Name = name;
+        this.city = city;
+        this.valable = valable;
+        Rate = rate;
     }
 
     public int getPhoto() {

@@ -1,4 +1,4 @@
-package com.example.mohamedhassan.traininghub.viewpager;
+package com.example.mohamedhassan.traininghub.RoomDetails;
 
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.example.mohamedhassan.traininghub.R;
 
-public class Room_Training_Details extends AppCompatActivity {
+public class RoomTrainingDetailsActivity extends AppCompatActivity {
 
     ViewPager viewPager;
     ViewPagerAdapter viewPagerAdapter;
@@ -18,7 +18,7 @@ public class Room_Training_Details extends AppCompatActivity {
 
         viewPager = (ViewPager) findViewById(R.id.viewPager);
 
-        viewPagerAdapter = new ViewPagerAdapter(Room_Training_Details.this);
+        viewPagerAdapter = new ViewPagerAdapter(RoomTrainingDetailsActivity.this);
 
         viewPager.setAdapter(viewPagerAdapter);
 

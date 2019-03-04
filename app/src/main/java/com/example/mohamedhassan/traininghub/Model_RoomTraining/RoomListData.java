@@ -1,6 +1,6 @@
-package com.example.mohamedhassan.traininghub.TrainingRoomDetailsActivity;
+package com.example.mohamedhassan.traininghub.Model_RoomTraining;
 
-public class VendorRoomData {
+public class RoomListData {
 
     int photo,image_traininge_room_department,image_traininge_room_department2,image_traininge_room_department3;
     String Name;
@@ -8,7 +8,7 @@ public class VendorRoomData {
     String Price;
     String valable;
 
-    public VendorRoomData(int photo, int image_traininge_room_department, int image_traininge_room_department2, int image_traininge_room_department3, String name, String capcity, String price, String valable) {
+    public RoomListData(int photo, int image_traininge_room_department, int image_traininge_room_department2, int image_traininge_room_department3, String name, String capcity, String price, String valable) {
         this.photo = photo;
         this.image_traininge_room_department = image_traininge_room_department;
         this.image_traininge_room_department2 = image_traininge_room_department2;

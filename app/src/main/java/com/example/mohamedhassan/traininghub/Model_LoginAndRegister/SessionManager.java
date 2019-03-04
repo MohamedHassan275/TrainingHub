@@ -27,16 +27,16 @@ public class SessionManager {
     // All Shared Preferences Keys
     private static final String IS_LOGIN = "IsLoggedIn";
 
-    // User name (make variable public to access from outside)
+    // UserRoomTraining name (make variable public to access from outside)
     public static final String KEY_ID = "user_id";
 
-    // User name (make variable public to access from outside)
+    // UserRoomTraining name (make variable public to access from outside)
     public static final String KEY_EMAIL = "email";
 
-    // User Name (make variable public to access from outside)
+    // UserRoomTraining Name (make variable public to access from outside)
     public static final String KEY_PASSWORD = "password";
 
-    // User Name (make variable public to access from outside)
+    // UserRoomTraining Name (make variable public to access from outside)
     public static final String KEY_USER_NAME = "userName";
 
     public static final String KEY_USER_IMAGE = "userImage";

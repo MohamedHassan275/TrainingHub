@@ -1,4 +1,4 @@
-package com.example.mohamedhassan.traininghub.TrainingRoomDetailsActivity;
+package com.example.mohamedhassan.traininghub.RoomDetails;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,16 +12,17 @@ import android.widget.TextView;
 
 
 import com.example.mohamedhassan.traininghub.ChangeLangauge;
+import com.example.mohamedhassan.traininghub.Model_RoomTraining.RoomListData;
 import com.example.mohamedhassan.traininghub.R;
 
 import java.util.List;
 
-public class RoomAdapter  extends RecyclerView.Adapter<RoomAdapter.MyViewHolder> {
+public class RoomListAdapter extends RecyclerView.Adapter<RoomListAdapter.MyViewHolder> {
 
-    private List<VendorRoomData> moviesList;
+    private List<RoomListData> moviesList;
     Context context;
 
-    public RoomAdapter(Context context, List<VendorRoomData> moviesList) {
+    public RoomListAdapter(Context context, List<RoomListData> moviesList) {
         this.moviesList = moviesList;
         this.context = context;
     }
@@ -46,7 +47,7 @@ public class RoomAdapter  extends RecyclerView.Adapter<RoomAdapter.MyViewHolder>
         }
     }
 
-    public RoomAdapter(List<VendorRoomData> moviesList) {
+    public RoomListAdapter(List<RoomListData> moviesList) {
         this.moviesList = moviesList;
     }
 
@@ -62,7 +63,7 @@ public class RoomAdapter  extends RecyclerView.Adapter<RoomAdapter.MyViewHolder>
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int position) {
 
-        VendorRoomData movie = moviesList.get(position);
+        RoomListData movie = moviesList.get(position);
         myViewHolder.PhotoRoom.setImageResource(movie.getPhoto());
         myViewHolder.image_traininge_room_department.setImageResource(movie.getImage_traininge_room_department());
         myViewHolder.image_traininge_room_department2.setImageResource(movie.getImage_traininge_room_department2());
