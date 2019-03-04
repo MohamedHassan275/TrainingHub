@@ -13,11 +13,10 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.mohamedhassan.traininghub.HomeMain;
+import com.example.mohamedhassan.traininghub.Home.HomeMain;
 import com.example.mohamedhassan.traininghub.R;
 import com.example.mohamedhassan.traininghub.Register.RegisterActivity;
 

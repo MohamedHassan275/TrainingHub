@@ -1,4 +1,4 @@
-package com.example.mohamedhassan.traininghub;
+package com.example.mohamedhassan.traininghub.Home;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -13,6 +13,7 @@ import com.example.mohamedhassan.traininghub.NavFragmentClases.Booking_fragmnt;
 import com.example.mohamedhassan.traininghub.NavFragmentClases.SignAndRegisterFragment;
 import com.example.mohamedhassan.traininghub.Home.Home_fragment;
 import com.example.mohamedhassan.traininghub.NavFragmentClases.Profile_fragment;
+import com.example.mohamedhassan.traininghub.R;
 
 public class HomeMain extends AppCompatActivity {
 

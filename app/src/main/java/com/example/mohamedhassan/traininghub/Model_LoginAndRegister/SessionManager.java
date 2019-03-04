@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 
-import com.example.mohamedhassan.traininghub.HomeMain;
+import com.example.mohamedhassan.traininghub.Home.HomeMain;
 import com.example.mohamedhassan.traininghub.login.LoginActivity;
 
 public class SessionManager {

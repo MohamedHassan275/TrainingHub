@@ -11,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.mohamedhassan.traininghub.Home.HomeMain;
+
 import java.util.Locale;
 
 public class ChangeLangauge extends AppCompatActivity implements View.OnClickListener {
