@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TrainingRoomActivity.TrainingRoomActivity">
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_marginTop="7dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/photo_traning_room"
+                    android:layout_width="match_parent"
+                    android:layout_height="125dp"
+                    android:src="@drawable/training_courses"
+                    android:layout_marginTop="5dp"/>
+
+            </LinearLayout>
+
+
+           <LinearLayout
+               android:layout_marginTop="5dp"
+               android:layout_marginLeft="10dp"
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <LinearLayout
+                   android:layout_weight="1"
+                   android:orientation="vertical"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content">
+
+                   <TextView
+                       android:id="@+id/city_traning_room"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="7dp"
+                       android:text="Mohamed Hassan"
+                       android:textColor="#000"
+                       android:textSize="15sp"/>
+
+
+                   <TextView
+                       android:id="@+id/address_traning_room"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="7dp"
+                       android:text="Nasr City"
+                       android:textColor="#000"
+                       android:textSize="15sp"/>
+
+                  <LinearLayout
+                      android:orientation="horizontal"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+
+                      <TextView
+                          android:id="@+id/region_traning_room"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:text="01156043662"
+                          android:layout_gravity="center"
+                          android:textColor="#000"
+                          android:textSize="15sp"/>
+
+                      <ImageView
+                          android:id="@+id/phone_call"
+                          android:layout_width="35dp"
+                          android:layout_height="35dp"
+                          android:layout_marginBottom="5dp"
+                          android:layout_marginLeft="15dp"
+                          android:src="@mipmap/phone"/>
+
+                      <ImageView
+                          android:id="@+id/share_phone"
+                          android:layout_width="35dp"
+                          android:layout_height="35dp"
+                          android:layout_marginBottom="5dp"
+                          android:layout_marginLeft="10dp"
+                          android:src="@mipmap/share"/>
+
+                  </LinearLayout>
+
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="7dp"
+                       android:text="21/2/2019"
+                       android:visibility="gone"
+                       android:textColor="#000"
+                       android:textSize="15sp"/>
+
+                   <TextView
+                       android:id="@+id/valable_traning_room"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginTop="5dp"
+                       android:text="From 15:00 To 17:00"
+                       android:textColor="#000"
+                       android:textSize="15sp"/>
+
+               </LinearLayout>
+               <LinearLayout
+                   android:layout_marginRight="25dp"
+                   android:orientation="vertical"
+                   android:layout_width="wrap_content"
+                   android:layout_height="match_parent">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="Cairo"
+                       android:layout_gravity="center"
+                       android:textColor="#000"
+                       android:textSize="15sp"/>
+
+                   <RatingBar
+                       android:id="@+id/ratingBar2"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center_horizontal"
+                       android:layout_marginTop="5dp"
+                       style="@style/Widget.AppCompat.RatingBar.Small"
+                       android:numStars="5"
+                       android:rating="3.0" />
+
+                   <TextView
+                       android:id="@+id/location_traning_room"
+                       android:layout_width="100dp"
+                       android:layout_height="wrap_content"
+                       android:background="#d4d0d0"
+                       android:padding="5dp"
+                       android:layout_gravity="center"
+                       android:gravity="center"
+                       android:layout_marginTop="5dp"
+                       android:text="location"
+                       android:textColor="#151414"
+                       android:textSize="15sp"/>
+
+               </LinearLayout>
+
+           </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Details : "
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"
+                android:textSize="17sp"/>
+            <TextView
+                android:id="@+id/disc_traning_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:padding="5dp"
+                android:layout_gravity="left"
+                android:gravity="left"
+                android:text="@string/details"
+                android:textColor="#000"
+                android:layout_marginLeft="10dp"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+
+           <TextView
+               android:id="@+id/number_of_rooms_traning_room"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="7dp"
+               android:layout_marginLeft="10dp"
+               android:text="Number Of Rooms : 10 Rooms"
+               android:textColor="#000"
+               android:textSize="15sp"/>
+
+           <android.support.v7.widget.RecyclerView
+               android:id="@+id/recycle_view_Room"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginBottom="10dp">
+
+           </android.support.v7.widget.RecyclerView>
+
+
+
+       </LinearLayout>
+
+   </ScrollView>
+</LinearLayout>

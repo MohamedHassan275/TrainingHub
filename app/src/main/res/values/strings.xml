@@ -1,0 +1,105 @@
+<resources>
+    <string name="app_name" translatable="false">Training Hup</string>
+    <string name="prompt_email" translatable="false">Email</string>
+    <string name="prompt_password" translatable="false">Password</string>
+    <string name="action_sign_in" translatable="false">Login</string>
+    <string name="action_sign_in_short" translatable="false">Sign in</string>
+    <string name="error_invalid_email" translatable="false">This email address is invalid</string>
+    <string name="error_invalid_password" translatable="false">This password is too short</string>
+    <string name="error_incorrect_password" translatable="false">This password is incorrect</string>
+    <string name="error_field_required" translatable="false">This field is required</string>
+    <string name="permission_rationale" translatable="false">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+
+    <string name="arabic" translatable="false">Arabic</string>
+    <string name="english" translatable="false">English</string>
+    <string name="changelanguage" translatable="false">Chose App Language</string>
+    <string name="homescreens" translatable="false">Home</string>
+
+
+    <string name="details" translatable="false">the room is very good its nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice nice </string>
+
+
+    <string name="ChageLanguage" translatable="false">ChageLanguage</string>
+
+    <string name="login" translatable="false">LOGIN</string>
+    <string name="btn_link_to_register" translatable="false">Not a member? Sign up now.</string>
+    <string name="btn_link_to_login" translatable="false">Already registred! Login Me.</string>
+    <string name="password_and_confirm_notmatch" translatable="false">Password and Confirm Password does not match </string>
+
+    <string name="email" translatable="false">Email</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="Login" translatable="false">LOGIN</string>
+    <string name="Register" translatable="false">Register</string>
+    <string name="show_pwd" translatable="false">Show Password</string>
+    <string name="hide_pwd" translatable="false">Hide Password</string>
+    <string name="forgot" translatable="false">Forgot password?</string>
+    <string name="closebutton" translatable="false">Close Button for Activity</string>
+    <string name="newUser" translatable="false">Not a Member yet? Sign Up here.</string>
+    <string name="Name" translatable="false">Name</string>
+    <string name="mobileNumber" translatable="false">Mobile Number</string>
+    <string name="location" translatable="false">Location</string>
+    <string name="confirmPassword" translatable="false">Confirm Password</string>
+    <string name="terms_conditions" translatable="false">By clicking SignUp you agree all the Terms and Conditions.</string>
+    <string name="signUp" translatable="false">SIGN UP</string>
+    <string name="already_user" translatable="false">Already have Account? Login here.</string>
+    <string name="registered_emailid" translatable="false">Please enter your Registered Email Id below:</string>
+    <string name="login_to" translatable="false">Login and Explore</string>
+    <string name="register_later" translatable="false">register later</string>
+    <string name="birth_date" translatable="false">Birth Date</string>
+    <string name="not_a_member_sign_up" translatable="false">Not a member? Sign up</string>
+    <string name="btnBackToHome" translatable="false">Back To Home</string>
+    <string name="hint_dob" translatable="false">Enter Age</string>
+    <string name="hint_password" translatable="false">Password</string>
+    <string name="confirm_password" translatable="false">Confirm password</string>
+    <string name="hint_email" translatable="false">Email</string>
+    <string name="hint_gender" translatable="false">I am</string>
+    <string name="gender" translatable="false">Gender</string>
+    <string name="Government" translatable="false">Government</string>
+    <string name="district" translatable="false">Region</string>
+    <string name="Birthday" translatable="false">Birthday</string>
+
+
+    <string-array name="government_array">
+        <item>cairo</item>
+        <item>Giza </item>
+        <item>Qalyubia</item>
+        <item>Alexandria</item>
+        <item>Dakahlia</item>
+        <item>Gharbia</item>
+        <item>Beni Suef</item>
+        <item>Beheira</item>
+        <item>Faiyum</item>
+        <item>Ismailia</item>
+        <item>Kafr El Sheikh</item>
+        <item>New Valley</item>
+        <item>Suez</item>
+        <item>Damietta</item>
+        <item>Monufia</item>
+        <item>Sharqia</item>
+        <item>Sohag</item>
+
+    </string-array>
+
+
+    <string name="male" translatable="false">Male</string>
+    <string name="female" translatable="false">Female</string>
+    <string name="btn_sign_up" translatable="false">Register !!</string>
+    <string name="err_msg_name" translatable="false">Please enter a Name</string>
+    <string name="err_msg_required" translatable="false">Valid Input Required</string>
+    <string name="err_msg_email" translatable="false">Please enter a Valid Email</string>
+    <string name="err_msg_password" translatable="false">Enter a Password</string>
+    <string name="err_msg_dob" translatable="false">Enter a valid D.O.B</string>
+    <string name="btn_login" translatable="false">Login</string>
+    <string name="btn_link_signup" translatable="false">Don\'t have an account yet Register !!</string>
+    <string name="btn_link_login" translatable="false">Already have an account Login !!</string>
+
+    <string name="title_home" translatable="false">Home</string>
+    <string name="Fav" translatable="false">Favourite</string>
+    <string name="bokking" translatable="false">Booking</string>
+    <string name="titleprofile" translatable="false">Profil</string>
+    <string name="title_activity_maps">Map</string>
+
+</resources>

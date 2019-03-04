@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Register.RegisterActivity">
+
+    <ScrollView
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp" >
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/signup_input_layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/reg_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:ems="10"
+                    android:textSize="15sp"
+                    android:inputType="textEmailAddress"
+                    android:hint="@string/email" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/signup_input_layout_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/Ed_reg_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:ems="10"
+                    android:textSize="15sp"
+                    android:hint="@string/Name"/>
+            </android.support.design.widget.TextInputLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/signup_input_layout_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/Ed_reg_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:ems="10"
+                    android:textSize="15sp"
+                    android:hint="@string/password"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/signup_input_layout_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/Ed_reg_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:ems="10"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:hint="@string/mobileNumber" />
+            </android.support.design.widget.TextInputLayout>
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="20dp">
+                <TextView
+                    android:paddingRight="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gender"
+                    android:layout_gravity="center"
+                    android:fontFeatureSettings="@string/hint_password"
+                    android:textSize="15sp"
+                    android:textColor="#000"
+                    android:fontFamily="@string/hint_password"/>
+                <RadioGroup
+                    android:id="@+id/gender_radio_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/male_radio_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/male"
+                        android:layout_marginLeft="35dp"
+                        android:checked="true"
+                        />
+                    <RadioButton
+                        android:id="@+id/female_radio_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:text = "@string/female"/>
+                </RadioGroup>
+                <TextView
+                    android:id="@+id/gender"
+                    android:visibility="invisible"
+                    android:layout_marginLeft="25dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="الجنس"
+                    android:layout_gravity="center"
+                    android:textSize="17sp"
+                    android:textColor="#000"/>
+            </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/signup_input_layout_age"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/signup_input_age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:ems="10"
+                    android:visibility="gone"
+                    android:textSize="15sp"
+                    android:inputType="number"
+                    android:hint="@string/hint_dob" />
+            </android.support.design.widget.TextInputLayout>
+
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <TextView
+                   android:paddingRight="7dp"
+                   android:layout_gravity="center"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:textColor="#000"
+                   android:textSize="15sp"
+                   android:text="@string/Government"/>
+
+               <Spinner
+                   android:layout_weight="1"
+                   android:layout_width="match_parent"
+                   android:layout_height="42dp"
+                   android:id="@+id/spinnerGovernment"
+                   android:background="#fafafa"
+                   android:prompt="@array/government_array"
+                   android:layout_marginRight="10dp"/>
+
+
+           </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/signup_input_layout_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/Ed_reg_district"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:ems="10"
+                    android:textSize="15sp"
+                    android:hint="@string/district"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <ProgressBar
+                android:id="@+id/m_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/signup_input_layout_birthday"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/signup_input_birthday"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:visibility="gone"
+                    android:singleLine="true"
+                    android:ems="10"
+                    android:textSize="15sp"
+                    android:hint="@string/Birthday"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/signup_input_layout_confirm_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp">
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/Ed_reg_confirmpassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:inputType="textPassword"
+                    android:singleLine="true"
+                    android:ems="10"
+                    android:textSize="15sp"
+                    android:hint="@string/confirmPassword"/>
+            </android.support.design.widget.TextInputLayout>
+
+
+            <LinearLayout
+                android:layout_marginTop="15sp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <CheckBox
+                    android:id="@+id/ChShowPassword"
+                    android:layout_width="wrap_content"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_gravity="left" />
+
+                <TextView
+                    android:paddingRight="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/show_pwd"
+                    android:textSize="15sp"
+                    android:textColor="#000"
+                    android:fontFamily="@string/hint_password"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_register"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_form"
+                android:layout_marginTop="15dp"
+                android:text="@string/btn_sign_up"
+                android:textColor="@android:color/white" />
+
+            <Button android:id="@+id/btn_intent_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/btn_link_login"
+                android:background="@null"
+                android:layout_marginTop="3dp"
+                android:textColor="@android:color/black"/>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

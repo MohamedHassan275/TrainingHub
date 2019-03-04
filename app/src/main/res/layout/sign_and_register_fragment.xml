@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center"
+            android:scaleType="centerCrop"
+            android:src="@drawable/training_courses"/>
+
+        <TextView
+            android:id="@+id/login_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="@string/login_to"
+            android:layout_gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"/>
+
+
+        <Button
+            android:id="@+id/btn_login_home_homescreen"
+            style="?android:textAppearanceSmall"
+            android:layout_width="250dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/login"
+            android:textColor="#ffffff"
+            android:background="@drawable/button_form"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/btn_register_homescreen"
+            style="?android:textAppearanceSmall"
+            android:layout_width="250dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="#ffffff"
+            android:text="@string/Register"
+            android:background="@drawable/button_form"
+            android:textStyle="bold"
+            android:layout_marginBottom="15dp"/>
+    </LinearLayout>
+
+
+</FrameLayout>

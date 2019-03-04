@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Training Hup</string>
+    <string name="prompt_email" translatable="false">البريد الاليكتروني</string>
+    <string name="prompt_password" translatable="false">كلمة السر</string>
+    <string name="action_sign_in" translatable="false">تسجيل الدخول</string>
+    <string name="action_sign_in_short" translatable="false">Sign in</string>
+    <string name="error_invalid_email" translatable="false">خطأ في البريد الالكتروني </string>
+    <string name="error_invalid_password" translatable="false">كلمة السر قصير جدا</string>
+    <string name="error_incorrect_password" translatable="false">خطأ في كلمة السر</string>
+    <string name="error_field_required" translatable="false">هذا الحقل مطلوب </string>
+    <string name="password_and_confirm_notmatch" translatable="false">كلمة السر غير متطابقة </string>
+    <string name="permission_rationale" translatable="false">"نحتاج اذن جهات الاتصال لتوفير البريد الالكتروني."
+    </string>
+
+
+    <string name="arabic" translatable="false">اللغة العربية</string>
+    <string name="english" translatable="false">اللغة الانجليزية</string>
+    <string name="changelanguage" translatable="false">اختار لغة البرنامج</string>
+    <string name="homescreens" translatable="false">الصفحة الرئيسية</string>
+
+    <string name="btnBackToHome" translatable="false">الرجوع الي الصفحة الرئيسية</string>
+    <string name="ChageLanguage" translatable="false">اختيار لغةالبرنامج</string>
+
+    <string name="login" translatable="false">تسجيل الدخول</string>
+    <string name="btn_link_to_register" translatable="false">ليس لديك حساب . اشترك الان</string>
+    <string name="btn_link_to_login" translatable="false">امتلك حساب. تسجيل دخولي</string>
+    <string name="gender" translatable="false">الجنس</string>
+
+    <string name="email" translatable="false">الايميل</string>
+    <string name="password" translatable="false">كلمة السر</string>
+    <string name="Login" translatable="false">تسجيل الدخول</string>
+    <string name="Register" translatable="false">تسجيل اشتراك</string>
+    <string name="show_pwd" translatable="false">رؤية كلمة السر</string>
+    <string name="hide_pwd" translatable="false">اخفاء كلمة السر</string>
+    <string name="forgot" translatable="false">فقد كلمة السر</string>
+    <string name="closebutton" translatable="false">Close Button for Activity</string>
+    <string name="newUser" translatable="false">ليس لدي حساب .. اشترك الان</string>
+    <string name="Name" translatable="false">الاسم </string>
+    <string name="mobileNumber" translatable="false">رقم الموبيل</string>
+    <string name="location" translatable="false">مكانك</string>
+    <string name="confirmPassword" translatable="false">اعادة كلمة السر</string>
+    <string name="terms_conditions" translatable="false">By clicking SignUp you agree all the Terms and Conditions.</string>
+    <string name="signUp" translatable="false">اشتراك</string>
+    <string name="already_user" translatable="false">لدي حساب .. تسجيل الدخول</string>
+    <string name="registered_emailid" translatable="false">Please enter your Registered Email Id below:</string>
+    <string name="login_to" translatable="false">تسجيل الدخول والاستكشاف
+</string>
+    <string name="register_later" translatable="false">الاشتراك لاحقا</string>
+    <string name="birth_date" translatable="false">تاريخ ميلادك</string>
+    <string name="not_a_member_sign_up" translatable="false"> ليس عضوا؟ سجل الان ..
+</string>
+
+    <string name="hint_dob" translatable="false" >عمرك</string>
+    <string name="hint_password" translatable="false">كلمة السر</string>
+    <string name="confirm_password" translatable="false" >اعادة كلمة السر</string>
+    <string name="hint_email" translatable="false" >الايميل</string>
+    <string name="hint_gender" translatable="false">انا</string>
+    <string name="Government" translatable="false">المحافظة</string>
+    <string name="district" translatable="false">المنطقة او الحي</string>
+    <string name="Birthday" translatable="false">تاريخ ميلادك</string>
+
+    <string name="title_home" translatable="false">الصفحة الرئيسية </string>
+    <string name="Fav" translatable="false">المفضلة</string>
+    <string name="bokking" translatable="false">الحجز</string>
+    <string name="titleprofile" translatable="false">صفحتك</string>
+
+    <string-array name="government_array">
+        <item>القاهرة </item>
+        <item>الجيزة </item>
+        <item>القليوبية</item>
+        <item>اسكندرية</item>
+        <item>الدقهلية</item>
+        <item>الغربية</item>
+        <item>بني سويف</item>
+        <item>البحية</item>
+        <item>الفيوم</item>
+        <item>الاسماعلية</item>
+        <item>كفر الشيخ</item>
+        <item>الوادي الجديد</item>
+        <item>السويس</item>
+        <item>دمياط</item>
+        <item>المنوفية</item>
+        <item>الشرقية</item>
+        <item>سوهاج</item>
+
+    </string-array>
+
+    <string name="male" translatable="false" >ذكر</string>
+    <string name="female" translatable="false">انثي</string>
+    <string name="btn_sign_up" translatable="false">اشترك الان !!</string>
+    <string name="err_msg_name" translatable="false">من فضلك ادخل الاسم</string>
+    <string name="err_msg_required" translatable="false">Valid Input Required</string>
+    <string name="err_msg_email" translatable="false" >Please enter a Valid Email</string>
+    <string name="err_msg_password" translatable="false" >ادخل كلمة السر</string>
+    <string name="err_msg_dob" translatable="false">Enter a valid D.O.B</string>
+    <string name="btn_login" translatable="false" >تسجيل الدخول</string>
+    <string name="btn_link_signup" translatable="false" >ليس لديك حساب بعد.. تسجيل!</string>
+    <string name="btn_link_login" translatable="false" >
+هل لديك حساب؟ سجل الان !!</string>
+
+</resources>
