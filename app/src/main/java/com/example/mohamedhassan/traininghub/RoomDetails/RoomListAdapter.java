@@ -77,8 +77,9 @@ public class RoomListAdapter extends RecyclerView.Adapter<RoomListAdapter.MyView
             @Override
             public void onClick(View v) {
 
-                Intent intent =new Intent(context,ChangeLangauge.class);
-                context.startActivity(intent);
+
+                Intent intent=new Intent(myViewHolder.itemView.getContext(), RoomDetailsActivity.class);
+                myViewHolder.itemView.getContext().startActivity(intent);
             }
         });
 

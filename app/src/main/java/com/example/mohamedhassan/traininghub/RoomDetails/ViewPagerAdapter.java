@@ -1,6 +1,7 @@
 package com.example.mohamedhassan.traininghub.RoomDetails;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -9,17 +10,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.mohamedhassan.traininghub.ChangeLangauge;
 import com.example.mohamedhassan.traininghub.R;
+
+import java.util.List;
 
 public class ViewPagerAdapter extends PagerAdapter {
 
     private Context context;
-    private LayoutInflater layoutInflater;
-    private Integer [] images = {R.drawable.phone,R.drawable.avatar,R.drawable.avatar};
+    private Integer [] images = {R.drawable.training_courses,R.drawable.avatar,R.drawable.home};
 
 
-    public ViewPagerAdapter( Context context) {
+    public ViewPagerAdapter(Context context) {
         this.context = context;
+
     }
 
     @Override
@@ -29,19 +33,19 @@ public class ViewPagerAdapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return view == object;
+        return view == ((View)object);
     }
     @Override
     public Object instantiateItem(ViewGroup container, final int position) {
 
-        layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View view = layoutInflater.inflate(R.layout.image_room_detials, null);
-        ImageView imageView = (ImageView) view.findViewById(R.id.imageView);
-        imageView.setImageResource(images[position]);
 
-        ViewPager vp = (ViewPager) container;
-        vp.addView(view, 0);
-        return view;
+        LayoutInflater  layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        View viewItem = layoutInflater.inflate(R.layout.image_room_detials, null);
+        ImageView itemImage= viewItem.findViewById(R.id.imageView);
+        itemImage.setImageResource(images[position]);
+        ((ViewPager) container).addView(viewItem, 0);
+
+        return viewItem;
 
     }
 
@@ -51,6 +55,8 @@ public class ViewPagerAdapter extends PagerAdapter {
         ViewPager vp = (ViewPager) container;
         View view = (View) object;
         vp.removeView(view);
+
+
 
     }
 }

@@ -29,12 +29,12 @@
         <activity
             android:name=".Home.HomeMain"
             android:label="@string/app_name">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
         <activity android:name=".ChangeLangauge" />
         <activity android:name=".TrainingRoomDetailsActivity.TrainingRoomDetailsActivity" />
@@ -55,7 +55,7 @@
             android:label="@string/title_activity_maps" >
 
         </activity>
-        <activity android:name=".RoomDetails.RoomTrainingDetailsActivity">
+        <activity android:name=".RoomDetails.RoomDetailsActivity">
 
         </activity>
     </application>
