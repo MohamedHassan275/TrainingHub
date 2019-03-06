@@ -23,18 +23,14 @@
                 android:layout_marginBottom="5dp" />
 
 
-           <LinearLayout
-               android:orientation="horizontal"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content">
+
 
                <LinearLayout
                    android:id="@+id/linearLayout2"
-                   android:layout_width="wrap_content"
+                   android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:layout_marginTop="5dp"
-                   android:layout_marginLeft="10dp"
-                   android:orientation="vertical">
+                   android:orientation="horizontal">
 
                    <TextView
                        android:id="@+id/roomName"
@@ -50,7 +46,6 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:layout_weight="1"
-                       android:gravity="center"
                        android:text="20 chair"
                        android:textColor="#000"
                        android:textSize="15dp" />
@@ -60,26 +55,25 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:layout_weight="1"
-                       android:gravity="center"
                        android:text="50 per 1 hr"
                        android:textColor="#000"
                        android:textSize="15dp" />
                </LinearLayout>
 
-               <TextView
-                   android:id="@+id/bookTextView"
-                   android:layout_width="175dp"
-                   android:layout_height="wrap_content"
-                   android:layout_gravity="center"
-                   android:layout_marginLeft="75dp"
-                   android:gravity="center"
-                   android:padding="5dp"
-                   android:background="#3260de"
-                   android:text="Book the Room"
-                   android:textColor="#ffffff"
-                   android:textSize="15sp" />
 
-           </LinearLayout>
+            <TextView
+                android:id="@+id/bookTextView"
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:padding="5dp"
+                android:layout_marginTop="25dp"
+                android:background="#3260de"
+                android:text="Book the Room"
+                android:textColor="#ffffff"
+                android:textSize="15sp" />
+
 
 
             <LinearLayout
@@ -87,7 +81,7 @@
                 android:orientation="horizontal"
                 android:gravity="left"
                 android:layout_marginLeft="10dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -114,25 +108,33 @@
             </LinearLayout>
 
 
-            <TextView
-                android:id="@+id/statusTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="15dp"
-                android:layout_marginLeft="10dp"
-                android:gravity="center"
-                android:text="Room mode"
-                android:textColor="#000"
-                android:textSize="13dp" />
+          <LinearLayout
+              android:layout_marginTop="15dp"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
 
-            <Spinner
-                android:id="@+id/roomSpinner"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="15dp"
-                android:layout_marginEnd="8dp"
-                android:gravity="center" />
+              <TextView
+                  android:id="@+id/statusTextView"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginLeft="10dp"
+                  android:gravity="center"
+                  android:text="Room mode"
+                  android:textColor="#000"
+                  android:textSize="13dp" />
+
+              <Spinner
+                  android:id="@+id/roomSpinner"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginStart="8dp"
+                  android:layout_marginTop="15dp"
+                  android:layout_marginEnd="8dp"
+                  android:gravity="center" />
+
+          </LinearLayout>
 
             <android.support.v7.widget.RecyclerView
                 android:id="@+id/roomTimeRecyclerView"
