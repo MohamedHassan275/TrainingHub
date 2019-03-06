@@ -7,11 +7,152 @@
     android:layout_height="match_parent"
     tools:context=".RoomDetails.RoomDetailsActivity">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/viewPager"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="190dp"
-        android:layout_marginBottom="8dp"/>
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="5dp" />
+
+
+           <LinearLayout
+               android:orientation="horizontal"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content">
+
+               <LinearLayout
+                   android:id="@+id/linearLayout2"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_marginTop="5dp"
+                   android:layout_marginLeft="10dp"
+                   android:orientation="vertical">
+
+                   <TextView
+                       android:id="@+id/roomName"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:text="Room name"
+                       android:textColor="#000"
+                       android:textSize="15dp" />
+
+                   <TextView
+                       android:id="@+id/roomCapacity"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:gravity="center"
+                       android:text="20 chair"
+                       android:textColor="#000"
+                       android:textSize="15dp" />
+
+                   <TextView
+                       android:id="@+id/roomSalary"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_weight="1"
+                       android:gravity="center"
+                       android:text="50 per 1 hr"
+                       android:textColor="#000"
+                       android:textSize="15dp" />
+               </LinearLayout>
+
+               <TextView
+                   android:id="@+id/bookTextView"
+                   android:layout_width="175dp"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_marginLeft="75dp"
+                   android:gravity="center"
+                   android:padding="5dp"
+                   android:background="#3260de"
+                   android:text="Book the Room"
+                   android:textColor="#ffffff"
+                   android:textSize="15sp" />
+
+           </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/LinearDateBook"
+                android:orientation="horizontal"
+                android:gravity="left"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center"
+                    android:text="Select Day at Book"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/dateBook"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:layout_gravity="center"
+                    android:text="27/5/1995"
+                    android:textColor="#000"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/statusTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:text="Room mode"
+                android:textColor="#000"
+                android:textSize="13dp" />
+
+            <Spinner
+                android:id="@+id/roomSpinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="8dp"
+                android:gravity="center" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/roomTimeRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginLeft="5dp" />
+
+            <org.florescu.android.rangeseekbar.RangeSeekBar
+                android:id="@+id/price_bar_with_label"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
 
 
 </LinearLayout>

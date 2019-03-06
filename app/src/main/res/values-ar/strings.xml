@@ -65,7 +65,7 @@
     <string name="bokking" translatable="false">الحجز</string>
     <string name="titleprofile" translatable="false">صفحتك</string>
 
-    <string-array name="government_array">
+    <string-array name="government_arrray">
         <item>القاهرة </item>
         <item>الجيزة </item>
         <item>القليوبية</item>

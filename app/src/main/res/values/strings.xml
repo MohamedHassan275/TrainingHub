@@ -62,7 +62,7 @@
     <string name="Birthday" translatable="false">Birthday</string>
 
 
-    <string-array name="government_array">
+    <string-array name="government_arrray">
         <item>cairo</item>
         <item>Giza </item>
         <item>Qalyubia</item>

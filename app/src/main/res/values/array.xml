@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="government_array">
+        <item>cairo</item>
+        <item>Giza </item>
+        <item>Qalyubia</item>
+        <item>Alexandria</item>
+        <item>Dakahlia</item>
+        <item>Gharbia</item>
+        <item>Beni Suef</item>
+        <item>Beheira</item>
+        <item>Faiyum</item>
+        <item>Ismailia</item>
+        <item>Kafr El Sheikh</item>
+        <item>New Valley</item>
+        <item>Suez</item>
+        <item>Damietta</item>
+        <item>Monufia</item>
+        <item>Sharqia</item>
+        <item>Sohag</item>
+
+    </string-array>
+    <string-array name="room_status_array">
+        <item>avilable</item>
+        <item>booked (not Confirmed) </item>
+        <item>confirmed</item>
+    </string-array>
+</resources>

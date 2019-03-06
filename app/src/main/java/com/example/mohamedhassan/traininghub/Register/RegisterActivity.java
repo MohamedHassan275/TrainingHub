@@ -91,7 +91,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
         });
 
         arrayAdapter = ArrayAdapter.createFromResource(this,
-                R.array.government_array , android.R.layout.simple_spinner_item);
+                R.array.government_arrray , android.R.layout.simple_spinner_item);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(arrayAdapter);
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
