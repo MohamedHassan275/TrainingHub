@@ -2,7 +2,7 @@ package com.example.mohamedhassan.traininghub.Model_RoomTraining;
 
 public class TrainingRoomListData {
 
-    int photo,rate;
+    int photo,rate,photo_GetRooms;
     String name;
     String location;
     String phone;
@@ -11,17 +11,17 @@ public class TrainingRoomListData {
     String date;
 
 
-    public TrainingRoomListData(int photo, int rate, String name, String location, String phone, String valable, String ratingBar_vendor, String date_vendor) {
+    public TrainingRoomListData(int photo, int rate, String name, String location, String phone, String valable, String ratingBarTrainingRoom, String date) {
         this.photo = photo;
         this.rate = rate;
+        this.photo_GetRooms = photo_GetRooms;
         this.name = name;
         this.location = location;
         this.phone = phone;
         this.valable = valable;
-        this.ratingBarTrainingRoom = ratingBar_vendor;
-        this.date = date_vendor;
+        this.ratingBarTrainingRoom = ratingBarTrainingRoom;
+        this.date = date;
     }
-
 
     public int getPhoto() {
         return photo;
@@ -29,6 +29,10 @@ public class TrainingRoomListData {
 
     public int getRate() {
         return rate;
+    }
+
+    public int getPhoto_GetRooms() {
+        return photo_GetRooms;
     }
 
     public String getName() {

@@ -8,19 +8,30 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 
+import com.example.mohamedhassan.traininghub.Model_RoomTraining.GetRoomListData;
+import com.example.mohamedhassan.traininghub.Model_RoomTraining.RoomListData;
 import com.example.mohamedhassan.traininghub.Model_RoomTraining.TrainingRoomListData;
 import com.example.mohamedhassan.traininghub.R;
+import com.example.mohamedhassan.traininghub.RoomDetails.RoomWorkSpaceListAdapter;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Home_fragment extends Fragment implements TrainingRoomListContract.View {
+public class Home_fragment extends Fragment implements WorkSpaceListContract.View {
 
-  //  ProgressBar mProgressView;
-    RecyclerView recyclerView;
+    ProgressBar mProgressView;
+    RecyclerView recyclerView,recyclerView2;
+    ImageView photo_GetRooms;
     private List<TrainingRoomListData> movieVendorList = new ArrayList<>();
-    private TrainingRoomListAdapter vendorAdapter;
+    private List<RoomListData> roomListData = new ArrayList<>();
+     WrokSpaceListAdapter wrokSpaceListAdapter;
+
+    private List<GetRoomListData> getRoomListData = new ArrayList<>();
+    private RoomWorkSpaceListAdapter roomListAdapter;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,14 +47,35 @@ public class Home_fragment extends Fragment implements TrainingRoomListContract.
       //  mProgressView = (ProgressBar)view.findViewById(R.id.home_progress);
         recyclerView = (RecyclerView)view.findViewById(R.id.recycle_view_TrainingRoom);
 
-        vendorAdapter = new TrainingRoomListAdapter(getContext(),movieVendorList);
+        wrokSpaceListAdapter = new WrokSpaceListAdapter(getContext(),movieVendorList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity(),LinearLayoutManager.VERTICAL, false);
         recyclerView.setLayoutManager(mLayoutManager);
 
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(vendorAdapter);
+        recyclerView.setAdapter(wrokSpaceListAdapter);
 
-       prepareVendorData();
+
+
+        photo_GetRooms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if(recyclerView2.getVisibility()==View.GONE ){
+
+                    recyclerView2.setVisibility(View.VISIBLE);
+
+                }else if (recyclerView2.getVisibility()==View.VISIBLE){
+
+                    recyclerView2.setVisibility(View.GONE);
+
+
+                }
+
+            }
+        });
+
+
+        prepareVendorData();
 
 
         return view;
@@ -59,7 +91,7 @@ public class Home_fragment extends Fragment implements TrainingRoomListContract.
     @Override
     public void navigateToDetailRoom() {
 
-        Intent intent = new Intent(getContext(), TrainingRoomDetailsActivity.class);
+        Intent intent = new Intent(getContext(), WorkSpaceDetailsActivity.class);
         startActivity(intent);
     }
 
@@ -72,8 +104,7 @@ public class Home_fragment extends Fragment implements TrainingRoomListContract.
 
     private void prepareVendorData() {
 
-        TrainingRoomListData movie = new TrainingRoomListData(R.drawable.training_courses,R.drawable.star_fill,"Mohamed Hassan",
-                "Sohag","01156043662","From 15:00 To 17:00","3.5","25/2/2019");
+        TrainingRoomListData movie = new TrainingRoomListData(R.drawable.training_courses,R.drawable.star_fill,"Mohamed Hassan", "Sohag","01156043662","From 15:00 To 17:00","3.5","25/2/2019");
         movieVendorList.add(movie);
         movie = new TrainingRoomListData(R.drawable.training_courses,R.drawable.star_fill,"Mahmoud Hassan",
                 "Cairo","01113246541","From 17:00 To 19:00","4.3","5/1/2019");
@@ -121,5 +152,27 @@ public class Home_fragment extends Fragment implements TrainingRoomListContract.
         movieVendorList.add(movie);
     }
 
+
+
+   /* private void prepareGetRoomData() {
+
+        GetRoomListData getRoomListData = new GetRoomListData(R.drawable.food,R.drawable.drink,R.drawable.food,"Room 1"
+                ,"50 P#H","25");
+        this.getRoomListData.add(getRoomListData);
+        this.getRoomListData.add(getRoomListData);
+        getRoomListData = new GetRoomListData(R.drawable.food,R.drawable.drink,R.drawable.food,"Room 2"
+                ,"35 P#H","50");
+        this.getRoomListData.add(getRoomListData);
+        getRoomListData = new GetRoomListData(R.drawable.food,R.drawable.drink,R.drawable.food,"Room 3"
+                ,"45 P#H","75");
+        this.getRoomListData.add(getRoomListData);
+        getRoomListData = new GetRoomListData(R.drawable.food,R.drawable.drink,R.drawable.food,"Room 4"
+                ,"30 P#H","100");
+        this.getRoomListData.add(getRoomListData);
+        getRoomListData = new GetRoomListData(R.drawable.food,R.drawable.drink,R.drawable.food,"Room 5"
+                ,"55 P#H","35");
+        this.getRoomListData.add(getRoomListData);
+
+    }*/
 
 }

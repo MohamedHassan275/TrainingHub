@@ -11,7 +11,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import com.example.mohamedhassan.traininghub.ChangeLangauge;
 import com.example.mohamedhassan.traininghub.Model_RoomTraining.RoomListData;
 import com.example.mohamedhassan.traininghub.R;
 
@@ -55,7 +54,7 @@ public class RoomListAdapter extends RecyclerView.Adapter<RoomListAdapter.MyView
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View itemView = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.room_training, viewGroup, false);
+                .inflate(R.layout.work_space_list, viewGroup, false);
 
         return new MyViewHolder(itemView);
     }
@@ -78,7 +77,7 @@ public class RoomListAdapter extends RecyclerView.Adapter<RoomListAdapter.MyView
             public void onClick(View v) {
 
 
-                Intent intent=new Intent(myViewHolder.itemView.getContext(), RoomDetailsActivity.class);
+                Intent intent=new Intent(myViewHolder.itemView.getContext(), RoomAcitivityDetailsActivity.class);
                 myViewHolder.itemView.getContext().startActivity(intent);
             }
         });

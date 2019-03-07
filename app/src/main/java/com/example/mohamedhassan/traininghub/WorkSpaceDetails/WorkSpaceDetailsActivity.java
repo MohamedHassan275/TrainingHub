@@ -1,4 +1,4 @@
-package com.example.mohamedhassan.traininghub.TrainingRoomDetailsActivity;
+package com.example.mohamedhassan.traininghub.WorkSpaceDetails;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -19,22 +19,22 @@ import com.example.mohamedhassan.traininghub.Model_RoomTraining.RoomListData;
 import java.util.ArrayList;
 import java.util.List;
 
-public class TrainingRoomDetailsActivity extends AppCompatActivity implements TrainingRoomDetailsContract.View {
+public class WorkSpaceDetailsActivity extends AppCompatActivity implements WorkSpaceDetailsActivityContract.View {
 
     RecyclerView recyclerView;
     private List<RoomListData> movieVendorList = new ArrayList<>();
     private RoomListAdapter roomAdapter;
     TextView location;
     ImageView phone_call,share_phone;
-    TrainingRoomDetailsActivity context = this;
+    WorkSpaceDetailsActivity context = this;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_training_room);
+        setContentView(R.layout.activity_detail_work_space);
 
 
-        TrainingRoomDetailsActivity.this.setTitle("Training Room");
+        WorkSpaceDetailsActivity.this.setTitle("Training Room");
         recyclerView = (RecyclerView) findViewById(R.id.recycle_view_Room);
 
         roomAdapter = new RoomListAdapter(movieVendorList);
@@ -97,7 +97,7 @@ public class TrainingRoomDetailsActivity extends AppCompatActivity implements Tr
     @Override
     public void BrnLocation() {
 
-        startActivity(new Intent(TrainingRoomDetailsActivity.this, MapsActivity.class));
+        startActivity(new Intent(WorkSpaceDetailsActivity.this, MapsActivity.class));
         finish();
 
     }

@@ -14,16 +14,16 @@ import android.widget.TextView;
 
 import com.example.mohamedhassan.traininghub.Model_RoomTraining.TrainingRoomListData;
 import com.example.mohamedhassan.traininghub.R;
-import com.example.mohamedhassan.traininghub.TrainingRoomDetailsActivity.TrainingRoomDetailsActivity;
+import com.example.mohamedhassan.traininghub.WorkSpaceDetails.WorkSpaceDetailsActivity;
 
 import java.util.List;
 
-public class TrainingRoomListAdapter extends RecyclerView.Adapter<TrainingRoomListAdapter.MyViewHolder> {
+public class WrokSpaceListAdapter extends RecyclerView.Adapter<WrokSpaceListAdapter.MyViewHolder> {
 
     private List<TrainingRoomListData> moviesList;
     Context context;
 
-    public TrainingRoomListAdapter(Context context, List<TrainingRoomListData> moviesList) {
+    public WrokSpaceListAdapter(Context context, List<TrainingRoomListData> moviesList) {
         this.moviesList = moviesList;
         this.context = context;
     }
@@ -53,7 +53,7 @@ public class TrainingRoomListAdapter extends RecyclerView.Adapter<TrainingRoomLi
 
     }
 
-    public TrainingRoomListAdapter(List<TrainingRoomListData> moviesList) {
+    public WrokSpaceListAdapter(List<TrainingRoomListData> moviesList) {
         this.moviesList = moviesList;
     }
 
@@ -61,10 +61,10 @@ public class TrainingRoomListAdapter extends RecyclerView.Adapter<TrainingRoomLi
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View itemView = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.vendor_data, viewGroup, false);
+                .inflate(R.layout.training_room_recyclerview, viewGroup, false);
 
 
-        return new TrainingRoomListAdapter.MyViewHolder(itemView);
+        return new WrokSpaceListAdapter.MyViewHolder(itemView);
     }
 
     @Override
@@ -82,14 +82,14 @@ public class TrainingRoomListAdapter extends RecyclerView.Adapter<TrainingRoomLi
 
 
 
-       myViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View v) {
+        myViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
 
-               Intent intent =new Intent(context,TrainingRoomDetailsActivity.class);
-               context.startActivity(intent);
-           }
-       });
+                Intent intent =new Intent(context,WorkSpaceDetailsActivity.class);
+                context.startActivity(intent);
+            }
+        });
 
 
     }

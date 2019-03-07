@@ -23,42 +23,64 @@ import java.util.Locale;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class RoomDetailsActivity extends AppCompatActivity {
+public class RoomAcitivityDetailsActivity extends AppCompatActivity {
 
-    ViewPager viewPager;
-    ViewPagerAdapter viewPagerAdapter;
-
-    private Spinner roomStatusSpinner;
-    private ArrayAdapter<CharSequence> arrayAdapter;
-
-    int currentPage = 0;
-    Timer timer;
-     int NUM_PAGES;
     final long DELAY_MS = 300;//delay in milliseconds before task is to be executed
     final long PERIOD_MS = 3000; // time in milliseconds between successive task executions.
-
+    ViewPager viewPager;
+    ViewPagerAdapter viewPagerAdapter;
+    int currentPage = 0;
+    Timer timer;
+    int NUM_PAGES;
     Context context = this;
     Calendar myCalendar = Calendar.getInstance();
     String dateFormat = "dd/MM/yyy";
-
     DatePickerDialog.OnDateSetListener DateRoomBooking;
     SimpleDateFormat sdf = new SimpleDateFormat(dateFormat, Locale.ENGLISH);
     LinearLayout LinearDateBook;
     TextView dateRoomBook;
+    private Spinner roomStatusSpinner;
+    private ArrayAdapter<CharSequence> arrayAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_room__training__details);
+        setContentView(R.layout.activity_room_details);
 
-        RoomDetailsActivity.this.setTitle("Room Details");
+        RoomAcitivityDetailsActivity.this.setTitle("Room Details");
 
 
         DifinView();
         setOnClickListener();
 
-        viewPagerAdapter = new ViewPagerAdapter(RoomDetailsActivity.this);
+
+        viewPagerAdapter = new ViewPagerAdapter(RoomAcitivityDetailsActivity.this);
         viewPager.setAdapter(viewPagerAdapter);
+
+    }
+
+    private void ScorllPhoto() {
+
+        final Handler handler = new Handler();
+        final Runnable Update = new Runnable() {
+            public void run() {
+                if (currentPage == NUM_PAGES - 1) {
+                    currentPage = 0;
+                }
+                viewPager.setCurrentItem(currentPage++, true);
+            }
+
+        };
+        currentPage = 0;
+
+
+        timer = new Timer(); // This will create a new Thread
+        timer.schedule(new TimerTask() { // task to be scheduled
+            @Override
+            public void run() {
+                handler.post(Update);
+            }
+        }, DELAY_MS, PERIOD_MS);
 
     }
 
@@ -66,8 +88,9 @@ public class RoomDetailsActivity extends AppCompatActivity {
     private void DifinView() {
 
         viewPager = (ViewPager) findViewById(R.id.viewPager);
-        dateRoomBook = (TextView)findViewById(R.id.dateBook);
+        dateRoomBook = (TextView) findViewById(R.id.dateBook);
         LinearDateBook = (LinearLayout) findViewById(R.id.LinearDateBook);
+        roomStatusSpinner = (Spinner) findViewById(R.id.roomSpinner);
     }
 
 
@@ -99,37 +122,20 @@ public class RoomDetailsActivity extends AppCompatActivity {
         };
 
 
-
         long currentdate = System.currentTimeMillis();
         String dateString = sdf.format(currentdate);
         dateRoomBook.setText(dateString);
 
-        final Handler handler = new Handler();
-        final Runnable Update = new Runnable() {
-            public void run() {
-                if (currentPage == NUM_PAGES-1) {
-                    currentPage = 0;
-                }
-                viewPager.setCurrentItem(currentPage++, true);
-            }
-        };
+        ScorllPhoto();
 
-        timer = new Timer(); // This will create a new Thread
-        timer.schedule(new TimerTask() { // task to be scheduled
-            @Override
-            public void run() {
-                handler.post(Update);
-            }
-        }, DELAY_MS, PERIOD_MS);
-
-         /* arrayAdapter=ArrayAdapter.createFromResource(context,R.array.room_status_array,R.layout.spinner_text);
+        arrayAdapter = ArrayAdapter.createFromResource(RoomAcitivityDetailsActivity.this, R.array.room_status_array, R.layout.spinner_text);
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         roomStatusSpinner.setAdapter(arrayAdapter);
         roomStatusSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                String pos=String.valueOf(position);
-                Toast.makeText(RoomDetailsActivity.this,"the item selected position "+pos,Toast.LENGTH_SHORT).show();
+                String pos = String.valueOf(position);
+                Toast.makeText(RoomAcitivityDetailsActivity.this, "the item selected position " + pos, Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -137,11 +143,9 @@ public class RoomDetailsActivity extends AppCompatActivity {
 
             }
         });
-*/
+
 
     }
-
-
 
 
     private void updateDate() {

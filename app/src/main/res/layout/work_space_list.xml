@@ -2,9 +2,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:card_view="http://schemas.android.com/tools"
-    android:orientation="vertical"
-    android:layout_height="wrap_content">
+    android:id="@+id/layout_adapter"
+    android:layout_marginBottom="3dp">
 
     <android.support.v7.widget.CardView
         xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -27,10 +29,11 @@
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
             android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
             android:layout_height="wrap_content">
 
             <LinearLayout
-                android:layout_weight="1"
+                android:layout_weight="1.5"
                 android:orientation="vertical"
                 android:layout_gravity="center"
                 android:layout_width="match_parent"
@@ -38,12 +41,17 @@
 
 
 
-                <ImageView
-                    android:id="@+id/image_traininge_room_list"
-                    android:layout_width="100dp"
-                    android:layout_height="75dp"
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circleRoomImageView"
+                    android:layout_width="70dp"
+                    android:layout_height="40dp"
                     android:layout_gravity="center"
-                    android:src="@drawable/eproperty"/>
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/profile_ic" />
+
 
                 <TextView
                     android:id="@+id/valable_traininge_room_list"
@@ -60,7 +68,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5dp"
-                    android:visibility="invisible"
+                    android:visibility="gone"
                     android:text="21/2/2019"
                     android:layout_gravity="center"
                     android:textColor="#000"
@@ -73,7 +81,7 @@
             <LinearLayout
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:layout_marginTop="15dp"
+                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
@@ -88,37 +96,35 @@
                     android:textColor="#000"
                     android:textSize="15sp"/>
 
-                <TextView
-                    android:id="@+id/location_traininge_room_list"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:text="Your location"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:textColor="#000"
-                    android:textSize="15sp"/>
-                <TextView
-                    android:id="@+id/phone_traininge_room_list"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:visibility="gone"
-                    android:layout_marginTop="5dp"
-                    android:gravity="center"
-                    android:layout_marginLeft="10dp"
-                    android:layout_gravity="center"
-                    android:textColor="#000"
-                    android:textSize="12sp"/>
+               <LinearLayout
+                   android:layout_marginTop="7dp"
+                   android:orientation="horizontal"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
 
-                <RatingBar
-                    android:id="@+id/ratingBar_vendor"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="3dp"
-                    style="@style/Widget.AppCompat.RatingBar.Small"
-                    android:numStars="5"
-                    android:rating="3.0" />
+                   <TextView
+                       android:layout_marginLeft="15dp"
+                       android:id="@+id/location_traininge_room_list"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="location"
+                       android:gravity="center"
+                       android:layout_gravity="center"
+                       android:textColor="#000"
+                       android:textSize="15sp"/>
+
+
+                   <RatingBar
+                       android:layout_marginLeft="42dp"
+                       android:id="@+id/ratingBar_vendor"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center"
+                       style="@style/Widget.AppCompat.RatingBar.Small"
+                       android:numStars="5"
+                       android:rating="3.0" />
+
+               </LinearLayout>
 
             </LinearLayout>
 
@@ -128,18 +134,19 @@
                 android:layout_height="match_parent">
 
 
-                <ImageView
-                    android:id="@+id/photo_GetRooms"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginTop="35dp"
-                    android:layout_gravity="center"
-                    app:srcCompat="@android:drawable/arrow_down_float" />
+                <ImageButton
+                    android:id="@+id/homeImageButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    app:srcCompat="@android:drawable/arrow_down_float"
+                    android:layout_gravity="center"/>
             </LinearLayout>
 
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
+
 
 
 </LinearLayout>
