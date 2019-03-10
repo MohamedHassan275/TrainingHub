@@ -1,148 +1,147 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/layout_adapter"
+    android:id="@+id/layout_room_work_space"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_marginBottom="5dp">
+    android:layout_height="wrap_content">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/cardViewRoom"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="5dp"
-        android:layout_marginRight="5dp"
-        android:layout_marginBottom="5dp"
+    <LinearLayout
         android:orientation="vertical"
-        app:cardCornerRadius="7dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-
-        <android.support.constraint.ConstraintLayout
-            android:id="@+id/constrainCard"
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardWorkSpaceViewRoom"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="3dp"
+            android:layout_marginRight="3dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="2dp"
+            app:cardCornerRadius="7dp">
+
 
             <LinearLayout
-                android:id="@+id/infoViewLayout"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginTop="8dp"
-                android:layout_marginBottom="3dp"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                android:layout_height="wrap_content">
 
-
-                <TextView
-                    android:id="@+id/capacityTextView"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:id="@+id/infoViewLayout"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:layout_centerHorizontal="true"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:layout_marginStart="15dp"
-                    android:layout_marginLeft="15dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="20 chair"
-                    android:textColor="#000000"
-                    android:textSize="15sp" />
+                    android:orientation="horizontal">
 
+
+                   <LinearLayout
+                       android:layout_weight="1"
+                       android:gravity="center"
+                       android:layout_gravity="center"
+                       android:layout_width="match_parent"
+                       android:layout_height="wrap_content">
+
+                       <TextView
+                           android:id="@+id/nameRoomWorkSpace"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:text=" name"
+                           android:textColor="#000000"
+                           android:textSize="15sp" />
+
+                   </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_weight="1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/capacityRoomWorkSpace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:text="20 chair"
+                            android:textColor="#000000"
+                            android:textSize="15dp" />
+
+                        <TextView
+                            android:id="@+id/priceRoomWorkSpace"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="5dp"
+                            android:layout_gravity="center"
+                            android:text="50 per 1 hr"
+                            android:textColor="#000000"
+                            android:textSize="15dp" />
+                    </LinearLayout>
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="vertical">
+                    android:gravity="center"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/nameRoomTextView"
+
+                    <ImageView
+                        android:id="@+id/imageViewRoomWorkSpace"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:layout_gravity="center"
-                        android:text="name"
-                        android:textColor="#000000"
-                        android:textSize="15dp" />
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginRight="3dp"
+                        android:background="@drawable/icon_shape"
+                        app:srcCompat="@android:drawable/ic_menu_call" />
 
-                    <TextView
-                        android:id="@+id/priceTextView"
+                    <ImageView
+                        android:id="@+id/imageViewRoomWorkSpace2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:layout_gravity="center"
-                        android:text="50 per 1 hr"
-                        android:textColor="#000000"
-                        android:textSize="15dp" />
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginRight="3dp"
+                        android:background="@drawable/icon_shape"
+                        app:srcCompat="@android:drawable/ic_dialog_map" />
+
+                    <ImageView
+                        android:id="@+id/imageViewRoomWorkSpace3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginRight="3dp"
+                        android:background="@drawable/icon_shape"
+                        app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+
+                    <ImageView
+                        android:id="@+id/imageViewRoomWorkSpace4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginRight="3dp"
+                        android:background="@drawable/icon_shape"
+                        app:srcCompat="@android:drawable/ic_menu_call" />
+
+                    <ImageView
+                        android:id="@+id/imageViewRoomWorkSpace5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="3dp"
+                        android:layout_marginRight="3dp"
+                        android:background="@drawable/icon_shape"
+                        app:srcCompat="@android:drawable/ic_menu_call" />
                 </LinearLayout>
+
             </LinearLayout>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:layout_marginTop="5dp"
-                android:orientation="horizontal"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/infoViewLayout">
+        </android.support.v7.widget.CardView>
 
+    </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/imageView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="3dp"
-                    android:layout_marginRight="3dp"
-                    android:background="@drawable/icon_shape"
-                    app:srcCompat="@android:drawable/ic_menu_call" />
-
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="3dp"
-                    android:layout_marginRight="3dp"
-                    android:background="@drawable/icon_shape"
-                    app:srcCompat="@android:drawable/ic_dialog_map" />
-
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="3dp"
-                    android:layout_marginRight="3dp"
-                    android:background="@drawable/icon_shape"
-                    app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="3dp"
-                    android:layout_marginRight="3dp"
-                    android:background="@drawable/icon_shape"
-                    app:srcCompat="@android:drawable/ic_menu_call" />
-
-                <ImageView
-                    android:id="@+id/imageView5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="3dp"
-                    android:layout_marginRight="3dp"
-                    android:background="@drawable/icon_shape"
-                    app:srcCompat="@android:drawable/ic_menu_call" />
-            </LinearLayout>
-
-        </android.support.constraint.ConstraintLayout>
-
-    </android.support.v7.widget.CardView>
-
-
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

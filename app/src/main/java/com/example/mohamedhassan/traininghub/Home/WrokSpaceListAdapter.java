@@ -4,64 +4,47 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.CardView;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-import com.example.mohamedhassan.traininghub.Model_RoomTraining.TrainingRoomListData;
+import com.example.mohamedhassan.traininghub.Model_RoomTraining.RoomWorkSpaceListData;
+import com.example.mohamedhassan.traininghub.Model_RoomTraining.WorkSpaceListData;
 import com.example.mohamedhassan.traininghub.R;
+import com.example.mohamedhassan.traininghub.RoomDetails.RoomWorkSpaceListAdapter;
 import com.example.mohamedhassan.traininghub.WorkSpaceDetails.WorkSpaceDetailsActivity;
 
-import java.util.List;
+import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class WrokSpaceListAdapter extends RecyclerView.Adapter<WrokSpaceListAdapter.MyViewHolder> {
 
-    private List<TrainingRoomListData> moviesList;
     Context context;
+    private ArrayList<WorkSpaceListData> workSpaceListData;
+    private ArrayList<RoomWorkSpaceListData> roomWorkSpaceListData;
+    private RoomWorkSpaceListAdapter roomWorkSpaceListAdapter;
+    private Boolean roomMode;
+    private WorkSpaceListContract.View mView;
 
-    public WrokSpaceListAdapter(Context context, List<TrainingRoomListData> moviesList) {
-        this.moviesList = moviesList;
+
+    public WrokSpaceListAdapter(Context context, ArrayList<WorkSpaceListData> workSpaceListData, ArrayList<RoomWorkSpaceListData> roomWorkSpaceListData) {
         this.context = context;
-    }
-
-    public class MyViewHolder extends RecyclerView.ViewHolder  {
-        public ImageView Photo;
-        public TextView Name, Location, Phone,Valable,date_vendor;
-        public CardView cardView;
-        public RatingBar ratingBar_vendor;
-
-
-        public MyViewHolder(View view) {
-            super(view);
-
-            Photo = (ImageView) view.findViewById(R.id.image_traininge_room_list);
-            Name = (TextView) view.findViewById(R.id.name_traininge_room_list);
-            Location = (TextView) view.findViewById(R.id.location_traininge_room_list);
-            Phone = (TextView) view.findViewById(R.id.phone_traininge_room_list);
-            date_vendor = (TextView) view.findViewById(R.id.date_vendor);
-            Valable = (TextView) view.findViewById(R.id.valable_traininge_room_list);
-            cardView = (CardView) view.findViewById(R.id.cardview_vedor);
-            ratingBar_vendor = (RatingBar) view.findViewById(R.id.ratingBar_vendor);
-
-
-        }
-
-
-    }
-
-    public WrokSpaceListAdapter(List<TrainingRoomListData> moviesList) {
-        this.moviesList = moviesList;
+        this.workSpaceListData = workSpaceListData;
+        this.roomWorkSpaceListData = roomWorkSpaceListData;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View itemView = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.training_room_recyclerview, viewGroup, false);
+                .inflate(R.layout.work_space_list, viewGroup, false);
 
 
         return new WrokSpaceListAdapter.MyViewHolder(itemView);
@@ -70,32 +53,84 @@ public class WrokSpaceListAdapter extends RecyclerView.Adapter<WrokSpaceListAdap
     @Override
     public void onBindViewHolder(MyViewHolder myViewHolder, int position) {
 
-        TrainingRoomListData vendor = moviesList.get(position);
-        myViewHolder.Photo.setImageResource(vendor.getPhoto());
-        myViewHolder.Name.setText(vendor.getName());
-        myViewHolder.Location.setText(vendor.getLocation());
-        myViewHolder.Phone.setText(vendor.getPhone());
-        myViewHolder.date_vendor.setText(vendor.getDate());
-        myViewHolder.Valable.setText(vendor.getValable());
-        myViewHolder.ratingBar_vendor.setRating(Float.parseFloat(vendor.getRatingBarTrainingRoom()));
-
-
-
-
-        myViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                Intent intent =new Intent(context,WorkSpaceDetailsActivity.class);
-                context.startActivity(intent);
-            }
-        });
-
+        myViewHolder.handel(workSpaceListData, position);
 
     }
 
     @Override
     public int getItemCount() {
-        return moviesList.size();
+
+        return workSpaceListData.size();
     }
+
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+
+
+        public CircleImageView Photo;
+        public TextView Name, Area, available;
+        public CardView cardView;
+        public ImageButton imageButton;
+        public RatingBar ratingBar;
+        public RecyclerView roomRecyclerView;
+
+
+        public MyViewHolder(View view) {
+            super(view);
+
+            cardView = (CardView) view.findViewById(R.id.cardview_work_space);
+            Photo = (CircleImageView) view.findViewById(R.id.circleWorkSpaceImageView);
+            imageButton = (ImageButton) view.findViewById(R.id.workSpaceImageButton);
+            Name = (TextView) view.findViewById(R.id.name_WorkSpace);
+            Area = (TextView) view.findViewById(R.id.Area);
+            available = (TextView) view.findViewById(R.id.valable_WorkSpace);
+            ratingBar = (RatingBar) view.findViewById(R.id.ratingBar_WorkSpace);
+            roomRecyclerView = (RecyclerView) view.findViewById(R.id.recyclerViewWorkSpace);
+
+        }
+
+        private void handel(final ArrayList<WorkSpaceListData> spaceListData, final int Postion) {
+            roomMode = false;
+            showRooms(roomMode);
+            Photo.setImageResource(spaceListData.get(Postion).getPhoto());
+            Name.setText(spaceListData.get(Postion).getName());
+            Area.setText(spaceListData.get(Postion).getArea());
+            available.setText("from " + spaceListData.get(Postion).getStart_time() + " to " + spaceListData.get(Postion).getEnd_time());
+            ratingBar.setRating((float) spaceListData.get(Postion).getRating());
+
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+            roomWorkSpaceListAdapter = new RoomWorkSpaceListAdapter(itemView.getContext(), roomWorkSpaceListData, layoutParams);
+            RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(itemView.getContext(), LinearLayoutManager.VERTICAL, false);
+            roomRecyclerView.setLayoutManager(layoutManager);
+            roomRecyclerView.setAdapter(roomWorkSpaceListAdapter);
+            roomWorkSpaceListAdapter.notifyDataSetChanged();
+
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent intent = new Intent(itemView.getContext(), WorkSpaceDetailsActivity.class);
+                    itemView.getContext().startActivity(intent);
+                }
+
+            });
+            imageButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (!roomMode) {
+                        roomMode = true;
+                    } else roomMode = false;
+
+                    showRooms(roomMode);
+                }
+            });
+
+        }
+
+        public void showRooms(boolean show) {
+            roomRecyclerView.setVisibility(show ? View.VISIBLE : View.GONE);
+        }
+    }
+
+
 }

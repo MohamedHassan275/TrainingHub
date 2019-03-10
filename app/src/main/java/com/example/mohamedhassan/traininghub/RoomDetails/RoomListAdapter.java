@@ -3,58 +3,37 @@ package com.example.mohamedhassan.traininghub.RoomDetails;
 import android.content.Context;
 import android.content.Intent;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 
-import com.example.mohamedhassan.traininghub.Model_RoomTraining.RoomListData;
+import com.example.mohamedhassan.traininghub.Model_RoomTraining.RoomDetailsListData;
 import com.example.mohamedhassan.traininghub.R;
 
-import java.util.List;
+import java.util.ArrayList;
+
+import de.hdodenhof.circleimageview.CircleImageView;
 
 public class RoomListAdapter extends RecyclerView.Adapter<RoomListAdapter.MyViewHolder> {
 
-    private List<RoomListData> moviesList;
+    private ArrayList<RoomDetailsListData> roomDetailsListData;
     Context context;
 
-    public RoomListAdapter(Context context, List<RoomListData> moviesList) {
-        this.moviesList = moviesList;
+    public RoomListAdapter(Context context, ArrayList<RoomDetailsListData> roomListData) {
         this.context = context;
-    }
+        this.roomDetailsListData = roomListData;
 
-    public class MyViewHolder extends RecyclerView.ViewHolder {
-        public ImageView PhotoRoom,image_traininge_room_department,image_traininge_room_department2,image_traininge_room_department3;
-        public TextView Name, Capcity, Price, Valable;
-
-
-        public MyViewHolder(View view) {
-            super(view);
-
-            PhotoRoom = (ImageView) view.findViewById(R.id.image_traininge_room);
-            image_traininge_room_department = (ImageView) view.findViewById(R.id.image_traininge_room_department);
-            image_traininge_room_department2 = (ImageView) view.findViewById(R.id.image_traininge_room_department2);
-            image_traininge_room_department3 = (ImageView) view.findViewById(R.id.image_traininge_room_department3);
-            Name = (TextView) view.findViewById(R.id.name_traininge_room);
-            Capcity = (TextView) view.findViewById(R.id.capcity_traininge_room);
-            Price = (TextView) view.findViewById(R.id.price_traininge_room);
-            Valable = (TextView) view.findViewById(R.id.valable_traininge_room);
-
-        }
-    }
-
-    public RoomListAdapter(List<RoomListData> moviesList) {
-        this.moviesList = moviesList;
     }
 
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View itemView = LayoutInflater.from(viewGroup.getContext())
-                .inflate(R.layout.work_space_list, viewGroup, false);
+                .inflate(R.layout.room_list, viewGroup, false);
 
         return new MyViewHolder(itemView);
     }
@@ -62,32 +41,51 @@ public class RoomListAdapter extends RecyclerView.Adapter<RoomListAdapter.MyView
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder myViewHolder, int position) {
 
-        RoomListData movie = moviesList.get(position);
-        myViewHolder.PhotoRoom.setImageResource(movie.getPhoto());
-        myViewHolder.image_traininge_room_department.setImageResource(movie.getImage_traininge_room_department());
-        myViewHolder.image_traininge_room_department2.setImageResource(movie.getImage_traininge_room_department2());
-        myViewHolder.image_traininge_room_department3.setImageResource(movie.getImage_traininge_room_department3());
-        myViewHolder.Name.setText(movie.getName());
-        myViewHolder.Capcity.setText(movie.getCapcity());
-        myViewHolder.Price.setText(movie.getPrice());
-        myViewHolder.Valable.setText(movie.getValable());
+        myViewHolder.handel(roomDetailsListData,position);
+    }
 
-        myViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    public class MyViewHolder extends RecyclerView.ViewHolder {
+
+        public CircleImageView circleImageView;
+        public CardView cardViewRoom;
+        public TextView Name, Capcity, Price;
 
 
-                Intent intent=new Intent(myViewHolder.itemView.getContext(), RoomAcitivityDetailsActivity.class);
-                myViewHolder.itemView.getContext().startActivity(intent);
-            }
-        });
+        public MyViewHolder(View view) {
+            super(view);
+
+            cardViewRoom = (CardView) view.findViewById(R.id.cardViewRoom);
+            circleImageView = (CircleImageView) view.findViewById(R.id.circleRoomListImageView);
+            Name = (TextView) view.findViewById(R.id.TextView_nameRoom);
+            Capcity = (TextView) view.findViewById(R.id.TextView_capacityRoomList);
+            Price = (TextView) view.findViewById(R.id.Textview_priceRoomList);
 
 
 
+        }
+
+
+        private void handel(final ArrayList<RoomDetailsListData> roomDetailsListData, final int Postion){
+
+            circleImageView.setImageResource(roomDetailsListData.get(Postion).getPhoto());
+            Name.setText(roomDetailsListData.get(Postion).getName());
+            Capcity.setText(roomDetailsListData.get(Postion).getCapcity());
+            Price.setText(roomDetailsListData.get(Postion).getPrice());
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    Intent intent = new Intent(itemView.getContext(), RoomAcitivityDetailsActivity.class);
+                    itemView.getContext().startActivity(intent);
+                }
+            });
+
+        }
     }
 
     @Override
     public int getItemCount() {
-        return moviesList.size();
+        return roomDetailsListData.size();
     }
 }

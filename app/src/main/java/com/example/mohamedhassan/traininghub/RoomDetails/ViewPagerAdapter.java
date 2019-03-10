@@ -1,7 +1,6 @@
 package com.example.mohamedhassan.traininghub.RoomDetails;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
@@ -10,10 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
-import com.example.mohamedhassan.traininghub.ChangeLangauge;
 import com.example.mohamedhassan.traininghub.R;
-
-import java.util.List;
 
 public class ViewPagerAdapter extends PagerAdapter {
 
@@ -40,7 +36,7 @@ public class ViewPagerAdapter extends PagerAdapter {
 
 
         LayoutInflater  layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-        View viewItem = layoutInflater.inflate(R.layout.image_room_detials, null);
+        View viewItem = layoutInflater.inflate(R.layout.image_viewpager_room_detials, null);
         ImageView itemImage= viewItem.findViewById(R.id.imageView);
         itemImage.setImageResource(images[position]);
         ((ViewPager) container).addView(viewItem, 0);

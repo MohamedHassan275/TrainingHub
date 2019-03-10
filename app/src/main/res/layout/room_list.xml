@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_adapter"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardViewRoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginBottom="5dp"
+            android:orientation="vertical"
+            app:cardCornerRadius="7dp">
+
+          <LinearLayout
+              android:orientation="vertical"
+              android:layout_width="250dp"
+              android:layout_marginBottom="25dp"
+              android:layout_height="wrap_content">
+
+              <LinearLayout
+                  android:id="@+id/infoViewLayout"
+                  android:layout_width="250dp"
+                  android:layout_height="match_parent"
+                  android:layout_marginTop="8dp"
+                  android:layout_marginBottom="3dp"
+                  android:layout_weight="1"
+                  android:orientation="horizontal">
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_marginBottom="5dp"
+                      android:layout_weight=".6"
+                      android:orientation="vertical">
+
+                      <de.hdodenhof.circleimageview.CircleImageView
+                          android:id="@+id/circleRoomListImageView"
+                          android:layout_width="70dp"
+                          android:layout_height="40dp"
+                          android:layout_gravity="center"
+                          android:layout_marginTop="10dp"
+                          android:layout_marginBottom="10dp"
+                          android:src="@drawable/profile_ic" />
+
+                      <TextView
+                          android:id="@+id/TextView_capacityRoomList"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center"
+                          android:layout_marginStart="15dp"
+                          android:layout_marginLeft="15dp"
+                          android:layout_marginEnd="8dp"
+                          android:layout_marginRight="8dp"
+                          android:layout_marginBottom="10dp"
+                          android:text="20 chair"
+                          android:textColor="#000000"
+                          android:textSize="15sp" />
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_weight=".6"
+                      android:gravity="center"
+                      android:orientation="vertical">
+
+                      <TextView
+                          android:id="@+id/TextView_nameRoom"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center"
+                          android:layout_marginStart="8dp"
+                          android:layout_marginLeft="8dp"
+                          android:layout_marginEnd="4dp"
+                          android:layout_marginRight="4dp"
+                          android:gravity="center"
+                          android:text="name"
+                          android:textColor="#000000"
+                          android:textSize="15dp" />
+
+                      <TextView
+                          android:id="@+id/Textview_priceRoomList"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="8dp"
+                          android:layout_marginLeft="8dp"
+                          android:layout_marginTop="7dp"
+                          android:layout_marginEnd="4dp"
+                          android:layout_marginRight="4dp"
+                          android:gravity="center"
+                          android:text="50 per 1 hr"
+                          android:textColor="#000000"
+                          android:textSize="15dp" />
+                  </LinearLayout>
+              </LinearLayout>
+
+
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:gravity="center"
+                  android:layout_gravity="center"
+                  android:orientation="horizontal">
+
+
+                  <ImageView
+                      android:id="@+id/imageViewRoomList1"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginEnd="3dp"
+                      android:layout_marginRight="3dp"
+                      android:background="@drawable/icon_shape"
+                      app:srcCompat="@android:drawable/ic_menu_call" />
+
+                  <ImageView
+                      android:id="@+id/imageViewRoomList2"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginEnd="3dp"
+                      android:layout_marginRight="3dp"
+                      android:background="@drawable/icon_shape"
+                      app:srcCompat="@android:drawable/ic_dialog_map" />
+
+                  <ImageView
+                      android:id="@+id/imageViewRoomList3"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginEnd="3dp"
+                      android:layout_marginRight="3dp"
+                      android:background="@drawable/icon_shape"
+                      app:srcCompat="@android:drawable/ic_lock_silent_mode_off" />
+
+                  <ImageView
+                      android:id="@+id/imageViewRoomList4"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginEnd="3dp"
+                      android:layout_marginRight="3dp"
+                      android:background="@drawable/icon_shape"
+                      app:srcCompat="@android:drawable/ic_menu_call" />
+
+                  <ImageView
+                      android:id="@+id/imageViewRoomList5"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_marginEnd="3dp"
+                      android:layout_marginRight="3dp"
+                      android:background="@drawable/icon_shape"
+                      app:srcCompat="@android:drawable/ic_menu_call" />
+              </LinearLayout>
+
+
+          </LinearLayout>
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+
+
+</LinearLayout>
