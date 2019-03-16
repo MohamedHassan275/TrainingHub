@@ -46,7 +46,7 @@
     <string name="signUp" translatable="false">SIGN UP</string>
     <string name="already_user" translatable="false">Already have Account? Login here.</string>
     <string name="registered_emailid" translatable="false">Please enter your Registered Email Id below:</string>
-    <string name="login_to" translatable="false">Login and Explore</string>
+    <string name="login_to" translatable="false">Sign or Register and Explore Work Space</string>
     <string name="register_later" translatable="false">register later</string>
     <string name="birth_date" translatable="false">Birth Date</string>
     <string name="not_a_member_sign_up" translatable="false">Not a member? Sign up</string>
@@ -63,6 +63,7 @@
 
 
     <string-array name="government_arrray">
+        <item>Selected Government</item>
         <item>cairo</item>
         <item>Giza </item>
         <item>Qalyubia</item>
@@ -83,6 +84,122 @@
 
     </string-array>
 
+    <string-array name="city_arrray">
+        <item>Selected City</item>
+        <item>Nasr City</item>
+        <item>Maadi</item>
+        <item>Helwaan</item>
+        <item>Maadi</item>
+        <item>Nasr City</item>
+        <item>Maadi</item>
+        <item>Nasr City</item>
+        <item>Maadi</item>
+        <item>Nasr City</item>
+        <item>Maadi</item>
+        <item>Nasr City</item>
+        <item> Maadi</item>
+        <item>Nasr City</item>
+        <item>Maadi</item>
+        <item>Nasr City</item>
+        <item>Maadi</item>
+        <item>Nasr City</item>
+
+    </string-array>
+
+    <string-array name="start_time_array">
+
+        <item>9:00AM</item>
+        <item>10:00AM</item>
+        <item>11:00AM</item>
+        <item>12:00PM</item>
+        <item>1:00PM</item>
+        <item>2:00PM</item>
+        <item>3:00PM</item>
+        <item>4:00PM</item>
+        <item>5:00PM</item>
+        <item>6:00PM</item>
+        <item>7:00PM</item>
+        <item>8:00PM</item>
+        <item>9:00PM</item>
+        <item>10:00PM</item>
+        <item>11:00PM</item>
+        <item>12:00AM</item>
+
+    </string-array>
+
+    <string-array name="end_time_array">
+
+        <item>10:00AM</item>
+        <item>11:00AM</item>
+        <item>12:00PM</item>
+        <item>1:00PM</item>
+        <item>2:00PM</item>
+        <item>3:00PM</item>
+        <item>4:00PM</item>
+        <item>5:00PM</item>
+        <item>6:00PM</item>
+        <item>7:00PM</item>
+        <item>8:00PM</item>
+        <item>9:00PM</item>
+        <item>10:00PM</item>
+        <item>11:00PM</item>
+        <item>12:00AM</item>
+    </string-array>
+
+    <string-array name="people_number_array">
+
+        <item> 1 </item>
+        <item> 2 </item>
+        <item> 3 </item>
+        <item> 4 </item>
+        <item> 5 </item>
+        <item> 6 </item>
+        <item> 7 </item>
+        <item> 8 </item>
+        <item> 9 </item>
+        <item> 10 </item>
+        <item> 11 </item>
+        <item> 12 </item>
+        <item> 13 </item>
+        <item> 14 </item>
+        <item> 15 </item>
+        <item> 16 </item>
+        <item> 17 </item>
+        <item> 18 </item>
+        <item> 19 </item>
+        <item> 20 </item>
+        <item> 21 </item>
+        <item> 22 </item>
+        <item> 23 </item>
+        <item> 24 </item>
+        <item> 25 </item>
+        <item> 26 </item>
+        <item> 27 </item>
+        <item> 28 </item>
+        <item> 29 </item>
+        <item> 30 </item>
+        <item> 31 </item>
+        <item> 32 </item>
+        <item> 33 </item>
+        <item> 34 </item>
+        <item> 35 </item>
+        <item> 36 </item>
+        <item> 37 </item>
+        <item> 38 </item>
+        <item> 39 </item>
+        <item> 40 </item>
+        <item> 41 </item>
+        <item> 42 </item>
+        <item> 43 </item>
+        <item> 44 </item>
+        <item> 45 </item>
+        <item> 46 </item>
+        <item> 47 </item>
+        <item> 48 </item>
+        <item> 49 </item>
+        <item> 50 </item>
+
+    </string-array>
 
     <string name="male" translatable="false">Male</string>
     <string name="female" translatable="false">Female</string>

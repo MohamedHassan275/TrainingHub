@@ -20,7 +20,7 @@
         android:clipToPadding="true"
         card_view:cardBackgroundColor="#ffffff"
         android:clipChildren="true"
-        app:cardElevation="10dp"
+        app:cardElevation="5dp"
         android:layout_margin="4dp"
         app:cardPreventCornerOverlap="false">
 

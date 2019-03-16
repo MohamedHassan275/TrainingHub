@@ -45,7 +45,7 @@ public class ChangeLangauge extends AppCompatActivity implements View.OnClickLis
         btn_english.setOnClickListener(this);
 
         AlertDialog.Builder alert = new AlertDialog.Builder(this);
-        // this is set the view from XML inside AlertDialog
+        // this is set the View from XML inside AlertDialog
         alert.setView(alertLayout);
         // disallow cancel of AlertDialog on click of back button and outside touch
         alert.setCancelable(false);

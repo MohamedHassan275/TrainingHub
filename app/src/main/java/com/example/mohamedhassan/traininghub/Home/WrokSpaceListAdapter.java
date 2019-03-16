@@ -7,7 +7,6 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -43,7 +42,7 @@ public class WrokSpaceListAdapter extends RecyclerView.Adapter<WrokSpaceListAdap
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View itemView = LayoutInflater.from(viewGroup.getContext())
+        android.view.View itemView = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.work_space_list, viewGroup, false);
 
 
@@ -74,7 +73,7 @@ public class WrokSpaceListAdapter extends RecyclerView.Adapter<WrokSpaceListAdap
         public RecyclerView roomRecyclerView;
 
 
-        public MyViewHolder(View view) {
+        public MyViewHolder(android.view.View view) {
             super(view);
 
             cardView = (CardView) view.findViewById(R.id.cardview_work_space);
@@ -105,18 +104,22 @@ public class WrokSpaceListAdapter extends RecyclerView.Adapter<WrokSpaceListAdap
             roomWorkSpaceListAdapter.notifyDataSetChanged();
 
 
-            itemView.setOnClickListener(new View.OnClickListener() {
+
+            itemView.setOnClickListener(new android.view.View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
+                public void onClick(android.view.View v) {
 
                     Intent intent = new Intent(itemView.getContext(), WorkSpaceDetailsActivity.class);
+                   /* RoomTrainingDetailsModel roomTrainingDetailsModel;
+                    roomTrainingDetailsModel=spaceListData.get(Postion);
+                    intent.putExtra("work",roomTrainingDetailsModel);*/
                     itemView.getContext().startActivity(intent);
                 }
 
             });
-            imageButton.setOnClickListener(new View.OnClickListener() {
+            imageButton.setOnClickListener(new android.view.View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
+                public void onClick(android.view.View v) {
                     if (!roomMode) {
                         roomMode = true;
                     } else roomMode = false;
@@ -128,7 +131,7 @@ public class WrokSpaceListAdapter extends RecyclerView.Adapter<WrokSpaceListAdap
         }
 
         public void showRooms(boolean show) {
-            roomRecyclerView.setVisibility(show ? View.VISIBLE : View.GONE);
+            roomRecyclerView.setVisibility(show ? android.view.View.VISIBLE : android.view.View.GONE);
         }
     }
 

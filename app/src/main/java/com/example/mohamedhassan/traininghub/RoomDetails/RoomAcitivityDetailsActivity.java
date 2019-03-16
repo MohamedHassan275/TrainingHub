@@ -66,6 +66,7 @@ public class RoomAcitivityDetailsActivity extends AppCompatActivity {
             public void run() {
                 if (currentPage == NUM_PAGES - 1) {
                     currentPage = 0;
+
                 }
                 viewPager.setCurrentItem(currentPage++, true);
             }

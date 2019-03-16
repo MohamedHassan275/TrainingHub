@@ -1,4 +1,4 @@
-package com.example.mohamedhassan.traininghub.NavFragmentClases;
+package com.example.mohamedhassan.traininghub.MainFragmentClases;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

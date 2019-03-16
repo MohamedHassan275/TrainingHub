@@ -1,4 +1,4 @@
-package com.example.mohamedhassan.traininghub.NavFragmentClases;
+package com.example.mohamedhassan.traininghub.MainFragmentClases;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -21,7 +21,7 @@ public class Booking_fragmnt extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.booking_fragment, container, false);
 
-
+        getActivity().setTitle("Booking");
 
 
         return view;

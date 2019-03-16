@@ -22,7 +22,7 @@ import android.widget.Toast;
 
 import com.example.mohamedhassan.traininghub.Home.HomeMain;
 import com.example.mohamedhassan.traininghub.R;
-import com.example.mohamedhassan.traininghub.Home.Home_fragment;
+import com.example.mohamedhassan.traininghub.Home.HomeFragment;
 import com.example.mohamedhassan.traininghub.login.LoginActivity;
 
 public class RegisterActivity extends AppCompatActivity implements RegisterContract.View {
@@ -152,7 +152,7 @@ public class RegisterActivity extends AppCompatActivity implements RegisterContr
     @Override
     public void navigateToMain() {
 
-        Intent intent = new Intent(RegisterActivity.this, Home_fragment.class);
+        Intent intent = new Intent(RegisterActivity.this, HomeFragment.class);
         startActivity(intent);
         finish();
 

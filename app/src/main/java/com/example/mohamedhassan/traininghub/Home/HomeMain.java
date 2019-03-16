@@ -9,10 +9,9 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.example.mohamedhassan.traininghub.Model_LoginAndRegister.SessionManager;
-import com.example.mohamedhassan.traininghub.NavFragmentClases.Booking_fragmnt;
-import com.example.mohamedhassan.traininghub.NavFragmentClases.SignAndRegisterFragment;
-import com.example.mohamedhassan.traininghub.Home.Home_fragment;
-import com.example.mohamedhassan.traininghub.NavFragmentClases.Profile_fragment;
+import com.example.mohamedhassan.traininghub.MainFragmentClases.Booking_fragmnt;
+import com.example.mohamedhassan.traininghub.MainFragmentClases.SignAndRegisterFragment;
+import com.example.mohamedhassan.traininghub.MainFragmentClases.Profile_fragment;
 import com.example.mohamedhassan.traininghub.R;
 
 public class HomeMain extends AppCompatActivity {
@@ -43,7 +42,7 @@ public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
 
         case R.id.navigation_home:
-        Home_fragment homeFragment=new Home_fragment();
+        HomeFragment homeFragment=new HomeFragment();
         FragmentTransaction fragmentTransactionHome=getSupportFragmentManager().beginTransaction();
         fragmentTransactionHome.replace(R.id.container,homeFragment).commit();
         return true;
@@ -53,6 +52,7 @@ public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Booking_fragmnt bookingFragmnt=new Booking_fragmnt();
             FragmentTransaction fragmentTransactionBooking=getSupportFragmentManager().beginTransaction();
             fragmentTransactionBooking.replace(R.id.container,bookingFragmnt).commit();
+            tab= String.valueOf("Booking");
 
         return true;
         case R.id.navigation_profile:
@@ -62,7 +62,6 @@ public boolean onNavigationItemSelected(@NonNull MenuItem item) {
         Profile_fragment profileFragment=new Profile_fragment();
         FragmentTransaction fragmentTransaction2=getSupportFragmentManager().beginTransaction();
         fragmentTransaction2.replace(R.id.container,profileFragment).commit();
-
         return true;
         }
 

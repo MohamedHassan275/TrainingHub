@@ -1,4 +1,4 @@
-package com.example.mohamedhassan.traininghub.NavFragmentClases;
+package com.example.mohamedhassan.traininghub.MainFragmentClases;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -26,6 +26,7 @@ public class SignAndRegisterFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.sign_and_register_fragment, container, false);
+
 
         btnLogin = (Button) view.findViewById(R.id.btn_login_home_homescreen);
         btnRegister = (Button) view.findViewById(R.id.btn_register_homescreen);

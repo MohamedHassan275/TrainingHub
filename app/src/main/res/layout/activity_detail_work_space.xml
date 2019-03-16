@@ -51,21 +51,21 @@
                    android:layout_height="wrap_content">
 
                    <TextView
-                       android:id="@+id/city_traning_room"
+                       android:id="@+id/name_traning_room"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:layout_marginTop="7dp"
-                       android:text="Mohamed Hassan"
+                       android:text=""
                        android:textColor="#000"
                        android:textSize="15sp"/>
 
 
                    <TextView
-                       android:id="@+id/address_traning_room"
+                       android:id="@+id/area_traning_room"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:layout_marginTop="7dp"
-                       android:text="Nasr City"
+                       android:text=""
                        android:textColor="#000"
                        android:textSize="15sp"/>
 
@@ -75,10 +75,10 @@
                       android:layout_height="wrap_content">
 
                       <TextView
-                          android:id="@+id/region_traning_room"
+                          android:id="@+id/phone_traning_room"
                           android:layout_width="wrap_content"
                           android:layout_height="wrap_content"
-                          android:text="01156043662"
+                          android:text=""
                           android:layout_gravity="center"
                           android:textColor="#000"
                           android:textSize="15sp"/>
@@ -112,11 +112,11 @@
                        android:textSize="15sp"/>
 
                    <TextView
-                       android:id="@+id/valable_traning_room"
+                       android:id="@+id/avalable_traning_room"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:layout_marginTop="5dp"
-                       android:text="From 15:00 To 17:00"
+                       android:text=""
                        android:textColor="#000"
                        android:textSize="15sp"/>
 
@@ -128,15 +128,16 @@
                    android:layout_height="match_parent">
 
                    <TextView
+                       android:id="@+id/city_training_room"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
-                       android:text="Cairo"
+                       android:text=""
                        android:layout_gravity="center"
                        android:textColor="#000"
                        android:textSize="15sp"/>
 
                    <RatingBar
-                       android:id="@+id/ratingBar2"
+                       android:id="@+id/ratingBar_room"
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:layout_gravity="center_horizontal"
@@ -177,14 +178,14 @@
                 android:layout_marginLeft="10dp"
                 android:textSize="17sp"/>
             <TextView
-                android:id="@+id/disc_traning_room"
+                android:id="@+id/details_traning_room"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="7dp"
                 android:padding="5dp"
                 android:layout_gravity="left"
                 android:gravity="left"
-                android:text="@string/details"
+                android:text=""
                 android:textColor="#000"
                 android:layout_marginLeft="10dp"
                 android:textSize="15sp"/>
@@ -197,7 +198,7 @@
                android:layout_height="wrap_content"
                android:layout_marginTop="7dp"
                android:layout_marginLeft="10dp"
-               android:text="Number Of Rooms : 10 Rooms"
+               android:text=""
                android:textColor="#000"
                android:textSize="15sp"/>
 

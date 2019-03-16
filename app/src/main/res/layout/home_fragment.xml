@@ -1,73 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-<LinearLayout
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Home.HomeFragment">
 
-
-
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/toolbar"
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#4052b5"
-        app:popupTheme="@style/AppTheme.AppBarOverlay">
+        android:layout_height="wrap_content">
 
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <include layout="@layout/app_tool_bar"/>
 
-            <LinearLayout
-                android:layout_weight="1"
-                android:orientation="vertical"
-                android:layout_gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/valable_WorkSpace"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Training Hub"
-                    android:layout_marginTop="2dp"
-                    android:layout_gravity="left"
-                    android:textColor="#ffffff"
-                    android:textSize="22sp"/>
-
-            </LinearLayout>
-            <LinearLayout
-                android:layout_weight="1"
-                android:gravity="right"
-                android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/imageView_filtering"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/search" />
-                <ImageView
-                    android:layout_marginRight="5dp"
-                    android:id="@+id/imageView_sorting"
-                    android:layout_width="35dp"
-                    android:layout_height="35dp"
-                    android:layout_gravity="center"
-                    android:src="@drawable/sort_workspace" />
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-    </android.support.v7.widget.Toolbar>
-
+    </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
@@ -90,6 +37,7 @@
                 android:layout_marginRight="5dp"
                 android:textSize="17sp"
                 android:paddingRight="3dp"
+                app:actionViewClass="android.support.v7.widget.SearchView"
                 android:layout_gravity="center"
                 android:background="#ffffff"
                 android:hint="ابحث عن قاعة تدريب..... "
@@ -102,36 +50,33 @@
                 android:layout_marginTop="5dp"
                 android:src="@drawable/search"/>
 
+
         </LinearLayout>
 
-           <android.support.v7.widget.RecyclerView
-               android:id="@+id/recycle_view_TrainingRoom"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginTop="5dp"
-               android:layout_marginBottom="5dp">
 
-           </android.support.v7.widget.RecyclerView>
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycle_view_TrainingRoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+
+        </android.support.v7.widget.RecyclerView>
 
 
-           <ProgressBar
-               android:id="@+id/home_progress"
-               style="?android:attr/progressBarStyleLarge"
-               android:layout_width="wrap_content"
-               android:layout_height="wrap_content"
-               android:layout_centerInParent="true"
-               android:layout_marginStart="8dp"
-               android:layout_marginTop="8dp"
-               android:layout_marginEnd="8dp"
-               android:layout_marginBottom="8dp"
-               android:layout_gravity="center"
-               android:visibility="gone"/>
-
+        <ProgressBar
+            android:id="@+id/home_progress"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
 
     </LinearLayout>
 
-
-
 </LinearLayout>
-
-</FrameLayout>

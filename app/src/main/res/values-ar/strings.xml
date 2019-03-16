@@ -25,7 +25,7 @@
     <string name="login" translatable="false">تسجيل الدخول</string>
     <string name="btn_link_to_register" translatable="false">ليس لديك حساب . اشترك الان</string>
     <string name="btn_link_to_login" translatable="false">امتلك حساب. تسجيل دخولي</string>
-    <string name="gender" translatable="false">الجنس</string>
+
 
     <string name="email" translatable="false">الايميل</string>
     <string name="password" translatable="false">كلمة السر</string>
@@ -44,14 +44,12 @@
     <string name="signUp" translatable="false">اشتراك</string>
     <string name="already_user" translatable="false">لدي حساب .. تسجيل الدخول</string>
     <string name="registered_emailid" translatable="false">Please enter your Registered Email Id below:</string>
-    <string name="login_to" translatable="false">تسجيل الدخول والاستكشاف
-</string>
+    <string name="login_to" translatable="false">سجل او اشترك واستكشف قاعات التدريب</string>
     <string name="register_later" translatable="false">الاشتراك لاحقا</string>
     <string name="birth_date" translatable="false">تاريخ ميلادك</string>
-    <string name="not_a_member_sign_up" translatable="false"> ليس عضوا؟ سجل الان ..
-</string>
-
+    <string name="not_a_member_sign_up" translatable="false">ليس عضوا؟ سجل الان ..</string>
     <string name="hint_dob" translatable="false" >عمرك</string>
+    <string name="gender" translatable="false">الجنس</string>
     <string name="hint_password" translatable="false">كلمة السر</string>
     <string name="confirm_password" translatable="false" >اعادة كلمة السر</string>
     <string name="hint_email" translatable="false" >الايميل</string>
@@ -59,13 +57,12 @@
     <string name="Government" translatable="false">المحافظة</string>
     <string name="district" translatable="false">المنطقة او الحي</string>
     <string name="Birthday" translatable="false">تاريخ ميلادك</string>
-
     <string name="title_home" translatable="false">الصفحة الرئيسية </string>
     <string name="Fav" translatable="false">المفضلة</string>
     <string name="bokking" translatable="false">الحجز</string>
     <string name="titleprofile" translatable="false">صفحتك</string>
 
-    <string-array name="government_arrray">
+   <!-- <string-array name="government_arrray">
         <item>القاهرة </item>
         <item>الجيزة </item>
         <item>القليوبية</item>
@@ -84,7 +81,7 @@
         <item>الشرقية</item>
         <item>سوهاج</item>
 
-    </string-array>
+    </string-array>-->
 
     <string name="male" translatable="false" >ذكر</string>
     <string name="female" translatable="false">انثي</string>

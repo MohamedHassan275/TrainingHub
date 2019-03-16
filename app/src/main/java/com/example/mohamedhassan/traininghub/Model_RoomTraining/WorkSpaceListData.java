@@ -2,7 +2,7 @@ package com.example.mohamedhassan.traininghub.Model_RoomTraining;
 
 import java.io.Serializable;
 
-public class WorkSpaceListData implements Serializable {
+public class WorkSpaceListData extends RoomTrainingDetailsModel implements Serializable {
 
     int photo;
     String Name;

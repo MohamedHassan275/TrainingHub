@@ -2,7 +2,7 @@ package com.example.mohamedhassan.traininghub.Home;
 
 public interface WorkSpaceListContract {
 
-    interface View{
+    interface View {
 
         void showMessage(String message);
 
